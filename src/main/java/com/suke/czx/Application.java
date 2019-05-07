@@ -21,7 +21,7 @@ public class Application extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
-		Demo1Server.mina();
+//		Demo1Server.mina();
 		//1
 	}
 

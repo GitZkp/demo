@@ -12,9 +12,14 @@ import javax.websocket.server.ServerEndpoint;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
+import org.springframework.web.socket.TextMessage;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
 /**
  * websocketServer相当于Controller，直接@ServerEndpoint("/websocket")@Component启用即可
  * 然后在里面实现@OnOpen,@onClose,@onMessage等方法
+ * 
+ * 
+ * SpringWebSocketHandler 
  * @author Administrator
  *
  */
@@ -22,11 +27,11 @@ import org.springframework.stereotype.Component;
 
 @ServerEndpoint("/websocket/{sid}")
 @Component
-public class WebSocketServer {
+public class WebSocketServer  extends TextWebSocketHandler{
 	
 	static Logger log=Logger.getLogger(WebSocketServer.class);
     //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
-    private static int onlineCount = 0;
+    private static  int onlineCount = 0;
     //concurrent包的线程安全Set，用来存放每个客户端对应的MyWebSocket对象。
     private static CopyOnWriteArraySet<WebSocketServer> webSocketSet = new CopyOnWriteArraySet<WebSocketServer>();
 
@@ -68,7 +73,7 @@ public class WebSocketServer {
     @OnMessage
     public void onMessage(String message, Session session) {
     	log.info("收到来自窗口"+sid+"的信息:"+message);
-        //群发消息
+        //群发消息,向所有链接的websocket群发
         for (WebSocketServer item : webSocketSet) {
             try {
                 item.sendMessage(message);
@@ -103,7 +108,7 @@ public class WebSocketServer {
     	log.info("推送消息到窗口"+sid+"，推送内容:"+message);
         for (WebSocketServer item : webSocketSet) {
             try {
-            	//这里可以设定只推送给这个sid的，为null则全部推送
+            	//这里可以设定只推送给这个sid的，为null则全部推送，id为空，群发
             	if(sid==null) {
             		item.sendMessage(message);
             	}else if(item.sid.equals(sid)){
@@ -126,5 +131,15 @@ public class WebSocketServer {
     public static synchronized void subOnlineCount() {
         WebSocketServer.onlineCount--;
     }
+
+	public void sendMessageToUser(String username, TextMessage textMessage) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sendMessageToUsers(TextMessage textMessage) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 

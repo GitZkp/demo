@@ -3,6 +3,8 @@ package com.suke.czx.datasources;
 import com.suke.czx.datasources.annotation.DataSource;
 import com.suke.czx.modules.user.entity.UserEntity;
 import com.suke.czx.modules.user.service.UserService;
+
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Service;
  * @email object_czx@163.com
  * @date 2017/9/16 23:10
  */
+@Aspect
 @Service
 public class DataSourceTestService implements DataSourceTestInterface{
 

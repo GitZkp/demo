@@ -9,7 +9,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+/**
+ * 
+ * @author Administrator
+ *@SpringBootTest with webEnvironment = WebEnvironment.RANDOM_PORT will also start the management server on a separate random port if your application uses a different port for the management server.
+ */
 public class JwtTest {
     @Autowired
     private JwtUtils jwtUtils;

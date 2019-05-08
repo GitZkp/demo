@@ -36,7 +36,7 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
         }else{
             return true;
         }
-
+      //没有声明需要权限,或者声明不验证权限
         if(annotation == null){
             return true;
         }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.method.HandlerMethod;
 
 /**
  * APP测试接口
@@ -32,6 +33,7 @@ public class ApiTestController {
     /**
      * 获取用户ID
      */
+    // ((HandlerMethod) handler).getMethodAnnotation(Login.class)，读取方法注解，如果有注解，做操作
     @Login
     @GetMapping("userId")
     public R userInfo(@RequestAttribute("userId") Integer userId){

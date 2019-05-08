@@ -43,12 +43,15 @@ public class ApiLoginController {
             @ApiResponse(code = 200, message = "Successful — 请求已完成"),
             @ApiResponse(code = 401, message = "token失效"),
             @ApiResponse(code = 404, message = "服务器找不到给定的资源；文档不存在"),
+            @ApiResponse(code = 405, message = "检查传参格式"),
             @ApiResponse(code = 500, message = "服务器不能完成请求")}
     )
+    //app传参  data:"json" json字符串
     @PostMapping("login")
     public AppBaseResult login(@RequestBody AppBaseResult appBaseResult) throws Exception {
         logger.info("用户登录",appBaseResult.decryptData());
-        HashMap<String,Object> pd = new Gson().fromJson(appBaseResult.decryptData(),HashMap.class);
+        @SuppressWarnings("unchecked")
+		HashMap<String,Object> pd = new Gson().fromJson(appBaseResult.decryptData(),HashMap.class);
         Assert.isNull(pd.get("mobile"), "手机号不能为空");
         Assert.isNull(pd.get("password"), "密码不能为空");
         if (!Assert.checkCellphone(pd.get("mobile").toString())){

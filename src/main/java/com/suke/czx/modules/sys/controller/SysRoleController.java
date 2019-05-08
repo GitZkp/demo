@@ -39,6 +39,7 @@ public class SysRoleController extends AbstractController {
 	@RequiresPermissions("sys:role:list")
 	public R list(@RequestParam Map<String, Object> params){
 		//如果不是超级管理员，则只查询自己创建的角色列表
+//		这里偷懒，只有一个管理员账号，验证用户id为1，就是admin，正常应该验证角色信息
 		if(getUserId() != Constant.SUPER_ADMIN){
 			params.put("createUserId", getUserId());
 		}

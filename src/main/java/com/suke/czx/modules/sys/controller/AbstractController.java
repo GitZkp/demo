@@ -1,6 +1,9 @@
 package com.suke.czx.modules.sys.controller;
 
 import com.suke.czx.modules.sys.entity.SysUserEntity;
+
+import java.util.List;
+
 import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,5 +24,8 @@ public abstract class AbstractController {
 
 	protected Long getUserId() {
 		return getUser().getUserId();
+	}
+	protected List<Long> getUserRole() {
+		return getUser().getRoleIdList();
 	}
 }

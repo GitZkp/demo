@@ -28,4 +28,5 @@ public abstract class AbstractController {
 	protected List<Long> getUserRole() {
 		return getUser().getRoleIdList();
 	}
+	
 }

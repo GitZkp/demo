@@ -56,7 +56,7 @@ var vm = new Vue({
 		},
 		updatePassword: function(){
 			layer.open({
-				type: 1,
+				type: 1,  
 				skin: 'layui-layer-molv',
 				title: "修改密码",
 				area: ['550px', '270px'],

@@ -13,6 +13,8 @@ spring:
     # 环境 dev|test|pro
     profiles:
         active: test
+    aop:
+        proxy-target-class:true
     # jackson时间格式化
     jackson:
         time-zone: GMT+8

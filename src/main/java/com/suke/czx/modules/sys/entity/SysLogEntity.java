@@ -23,6 +23,8 @@ public class SysLogEntity implements Serializable {
 	private String method;
 	//请求参数
 	private String params;
+	//请求结果
+	private String result;
 	//执行时长(毫秒)
 	private Long time;
 	//IP地址

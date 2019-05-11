@@ -2,18 +2,25 @@ package com.suke.czx.modules.sys.controller;
 
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
+import com.suke.czx.common.annotation.ParamNotNull;
+import com.suke.czx.common.annotation.SysLog;
 import com.suke.czx.common.utils.R;
 import com.suke.czx.common.utils.ShiroUtils;
 import com.suke.czx.modules.sys.entity.SysUserEntity;
 import com.suke.czx.modules.sys.service.SysUserService;
 import com.suke.czx.modules.sys.service.SysUserTokenService;
+
+import lombok.NonNull;
+
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Nonnull;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -61,8 +68,9 @@ public class SysLoginController extends AbstractController {
 	/**
 	 * 登录
 	 */
+	@SysLog(value="登陆")
 	@RequestMapping(value = "/sys/login", method = RequestMethod.POST)
-	public Map<String, Object> login(String username, String password, String captcha)throws IOException {
+	public Map<String, Object> login( @ParamNotNull @RequestParam String username,  String password,  String captcha)throws IOException {
 		//本项目已实现，前后端完全分离，但页面还是跟项目放在一起了，所以还是会依赖session
 		//如果想把页面单独放到nginx里，实现前后端完全分离，则需要把验证码注释掉(因为不再依赖session了)
 		String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);

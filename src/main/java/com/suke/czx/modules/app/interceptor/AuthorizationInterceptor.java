@@ -7,7 +7,9 @@ import com.suke.czx.modules.app.utils.JwtUtils;
 import com.suke.czx.modules.app.annotation.Login;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.http.HttpStatus;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -22,6 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2017-03-23 15:38
  */
 @Component
+@EnableAspectJAutoProxy(proxyTargetClass=true)
 public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
     @Autowired
     private JwtUtils jwtUtils;

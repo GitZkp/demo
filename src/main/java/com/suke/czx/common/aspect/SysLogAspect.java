@@ -19,6 +19,8 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.Map;
+import com.suke.czx.common.utils.R;
 
 
 /**
@@ -48,12 +50,12 @@ public class SysLogAspect {
 		long time = System.currentTimeMillis() - beginTime;
 
 		//保存日志
-		saveSysLog(point, time);
+		saveSysLog(point, time,result);
 
 		return result;
 	}
 
-	private void saveSysLog(ProceedingJoinPoint joinPoint, long time) {
+	private void saveSysLog(ProceedingJoinPoint joinPoint, long time,Object result) {
 		MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 		Method method = signature.getMethod();
 
@@ -72,7 +74,7 @@ public class SysLogAspect {
 		//请求的参数
 		Object[] args = joinPoint.getArgs();
 		try{
-			String params = new Gson().toJson(args[0]);
+			String params = new Gson().toJson(args);
 			sysLog.setParams(params);
 		}catch (Exception e){
 
@@ -84,9 +86,16 @@ public class SysLogAspect {
 		sysLog.setIp(IPUtils.getIpAddr(request));
 
 		//用户名
-		String username = ((SysUserEntity) SecurityUtils.getSubject().getPrincipal()).getUsername();
+		String username="";
+		if(!methodName.equals("login")) {
+		    username = ((SysUserEntity) SecurityUtils.getSubject().getPrincipal()).getUsername();
+		}else {
+			username=request.getParameter("username");
+		}
 		sysLog.setUsername(username);
 
+		//请求结果
+		
 		sysLog.setTime(time);
 		sysLog.setCreateDate(new Date());
 		//保存系统日志

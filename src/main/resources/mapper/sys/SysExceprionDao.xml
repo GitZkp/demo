@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.suke.czx.modules.sys.dao.ExceptionDao">
+
+	<!-- <select id="queryObject" resultType="com.suke.czx.modules.sys.entity.SysLogEntity">
+		select * from sys_log where id = #{value}
+	</select>
+
+	<select id="queryList" resultType="com.suke.czx.modules.sys.entity.SysLogEntity">
+		select * from sys_log 
+		<where>
+			<if test="key != null and key.trim() != ''">
+				`username` like concat('%',#{key},'%') or `operation` like concat('%',#{key},'%')
+			</if>
+		</where>
+		order by id desc 
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="queryTotal" resultType="int">
+		select count(*) from sys_log 
+		<where>
+			<if test="key != null and key.trim() != ''">
+				`username` like concat('%',#{key},'%') or `operation` like concat('%',#{key},'%')
+			</if>
+		</where>
+	</select> -->
+	 
+	<insert id="save" parameterType="com.suke.czx.modules.sys.entity.SysExceptionEntity" useGeneratedKeys="true" keyProperty="id">
+		insert into exception
+		(
+		<if test="uid !=null">
+			`uid`, 
+			</if>
+			`uname`, 
+			`url`, 
+			`param`,
+			`exception`,
+			`create_at`
+		)
+		values
+		(
+		<if test="uid !=null">
+			#{uid}, 
+		</if>
+			#{uname}, 
+			#{url}, 
+			#{param}, 
+			#{exception},
+			#{createat}
+		)
+	</insert>
+	
+	<!-- <delete id="delete">
+		delete from sys_log where id = #{value}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from sys_log where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete> -->
+
+</mapper>

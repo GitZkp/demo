@@ -94,7 +94,7 @@ public class SysLogAspect {
 		}
 		sysLog.setUsername(username);
 
-		//请求结果
+		//请求结果:无exception才记录log表
 		
 		sysLog.setTime(time);
 		sysLog.setCreateDate(new Date());

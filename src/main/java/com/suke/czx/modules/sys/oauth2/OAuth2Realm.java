@@ -3,6 +3,8 @@ package com.suke.czx.modules.sys.oauth2;
 import com.suke.czx.modules.sys.entity.SysUserEntity;
 import com.suke.czx.modules.sys.entity.SysUserTokenEntity;
 import com.suke.czx.modules.sys.service.ShiroService;
+import com.sun.tools.internal.ws.wsdl.framework.NoSuchEntityException;
+
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -63,7 +65,10 @@ public class OAuth2Realm extends AuthorizingRealm {
         //查询用户信息
         SysUserEntity user = shiroService.queryUser(tokenEntity.getUserId());
         //账号锁定
-        if(user.getStatus() == 0){
+        if(user==null) {
+        	throw new NoSuchEntityException("无此用户");
+        }
+        if(user.getStatus() == 0&&user!=null){
             throw new LockedAccountException("账号已被锁定,请联系管理员");
         }
 

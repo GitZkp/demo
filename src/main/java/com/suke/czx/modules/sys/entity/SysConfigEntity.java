@@ -15,8 +15,8 @@ public class SysConfigEntity {
 	@NotBlank(message="参数名不能为空")
 	private String key;
 	@NotBlank(message="参数值不能为空")
-	private String value; 
-	private String remark;
+	private String value; //状态   0：隐藏   1：显示
+	private String remark;//备注
 	
 	public Long getId() {
 		return id;

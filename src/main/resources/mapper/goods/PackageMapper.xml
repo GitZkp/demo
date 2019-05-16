@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.goods.dao.PackageMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.goods.entity.Package">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="package_name" jdbcType="VARCHAR" property="packageName" />
+    <result column="package_album" jdbcType="INTEGER" property="packageAlbum" />
+    <result column="package_type" jdbcType="INTEGER" property="packageType" />
+    <result column="mr_id" jdbcType="INTEGER" property="mrId" />
+    <result column="pre" jdbcType="INTEGER" property="pre" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="mer_id" jdbcType="INTEGER" property="merId" />
+    <result column="freight_id" jdbcType="INTEGER" property="freightId" />
+    <result column="type_id" jdbcType="TINYINT" property="typeId" />
+    <result column="sketch" jdbcType="VARCHAR" property="sketch" />
+    <result column="keywords" jdbcType="VARCHAR" property="keywords" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="marque" jdbcType="VARCHAR" property="marque" />
+    <result column="barcode" jdbcType="VARCHAR" property="barcode" />
+    <result column="brand_id" jdbcType="INTEGER" property="brandId" />
+    <result column="virtual" jdbcType="INTEGER" property="virtual" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="market_price" jdbcType="DECIMAL" property="marketPrice" />
+    <result column="integral" jdbcType="INTEGER" property="integral" />
+    <result column="stock" jdbcType="INTEGER" property="stock" />
+    <result column="warning_stock" jdbcType="INTEGER" property="warningStock" />
+    <result column="picture_url" jdbcType="VARCHAR" property="pictureUrl" />
+    <result column="posters" jdbcType="VARCHAR" property="posters" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="is_integral" jdbcType="CHAR" property="isIntegral" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="is_allow_exchage" jdbcType="TINYINT" property="isAllowExchage" />
+    <result column="like" jdbcType="INTEGER" property="like" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.suke.czx.modules.goods.entity.Package">
+    <result column="intro" jdbcType="LONGVARCHAR" property="intro" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, package_name, package_album, package_type, mr_id, pre, category_id, mer_id, freight_id, 
+    type_id, sketch, keywords, tags, marque, barcode, brand_id, virtual, price, market_price, 
+    integral, stock, warning_stock, picture_url, posters, status, state, is_integral, 
+    sort, created_at, is_allow_exchage, like
+  </sql>
+  <sql id="Blob_Column_List">
+    intro
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from package
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from package
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.suke.czx.modules.goods.entity.Package">
+    insert into package (id, package_name, package_album, 
+      package_type, mr_id, pre, 
+      category_id, mer_id, freight_id, 
+      type_id, sketch, keywords, 
+      tags, marque, barcode, 
+      brand_id, virtual, price, 
+      market_price, integral, stock, 
+      warning_stock, picture_url, posters, 
+      status, state, is_integral, 
+      sort, created_at, is_allow_exchage, 
+      like, intro)
+    values (#{id,jdbcType=INTEGER}, #{packageName,jdbcType=VARCHAR}, #{packageAlbum,jdbcType=INTEGER}, 
+      #{packageType,jdbcType=INTEGER}, #{mrId,jdbcType=INTEGER}, #{pre,jdbcType=INTEGER}, 
+      #{categoryId,jdbcType=INTEGER}, #{merId,jdbcType=INTEGER}, #{freightId,jdbcType=INTEGER}, 
+      #{typeId,jdbcType=TINYINT}, #{sketch,jdbcType=VARCHAR}, #{keywords,jdbcType=VARCHAR}, 
+      #{tags,jdbcType=VARCHAR}, #{marque,jdbcType=VARCHAR}, #{barcode,jdbcType=VARCHAR}, 
+      #{brandId,jdbcType=INTEGER}, #{virtual,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, 
+      #{marketPrice,jdbcType=DECIMAL}, #{integral,jdbcType=INTEGER}, #{stock,jdbcType=INTEGER}, 
+      #{warningStock,jdbcType=INTEGER}, #{pictureUrl,jdbcType=VARCHAR}, #{posters,jdbcType=VARCHAR}, 
+      #{status,jdbcType=TINYINT}, #{state,jdbcType=TINYINT}, #{isIntegral,jdbcType=CHAR}, 
+      #{sort,jdbcType=INTEGER}, #{createdAt,jdbcType=TIMESTAMP}, #{isAllowExchage,jdbcType=TINYINT}, 
+      #{like,jdbcType=INTEGER}, #{intro,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.goods.entity.Package">
+    insert into package
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="packageName != null">
+        package_name,
+      </if>
+      <if test="packageAlbum != null">
+        package_album,
+      </if>
+      <if test="packageType != null">
+        package_type,
+      </if>
+      <if test="mrId != null">
+        mr_id,
+      </if>
+      <if test="pre != null">
+        pre,
+      </if>
+      <if test="categoryId != null">
+        category_id,
+      </if>
+      <if test="merId != null">
+        mer_id,
+      </if>
+      <if test="freightId != null">
+        freight_id,
+      </if>
+      <if test="typeId != null">
+        type_id,
+      </if>
+      <if test="sketch != null">
+        sketch,
+      </if>
+      <if test="keywords != null">
+        keywords,
+      </if>
+      <if test="tags != null">
+        tags,
+      </if>
+      <if test="marque != null">
+        marque,
+      </if>
+      <if test="barcode != null">
+        barcode,
+      </if>
+      <if test="brandId != null">
+        brand_id,
+      </if>
+      <if test="virtual != null">
+        virtual,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="marketPrice != null">
+        market_price,
+      </if>
+      <if test="integral != null">
+        integral,
+      </if>
+      <if test="stock != null">
+        stock,
+      </if>
+      <if test="warningStock != null">
+        warning_stock,
+      </if>
+      <if test="pictureUrl != null">
+        picture_url,
+      </if>
+      <if test="posters != null">
+        posters,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="isIntegral != null">
+        is_integral,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="isAllowExchage != null">
+        is_allow_exchage,
+      </if>
+      <if test="like != null">
+        like,
+      </if>
+      <if test="intro != null">
+        intro,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="packageName != null">
+        #{packageName,jdbcType=VARCHAR},
+      </if>
+      <if test="packageAlbum != null">
+        #{packageAlbum,jdbcType=INTEGER},
+      </if>
+      <if test="packageType != null">
+        #{packageType,jdbcType=INTEGER},
+      </if>
+      <if test="mrId != null">
+        #{mrId,jdbcType=INTEGER},
+      </if>
+      <if test="pre != null">
+        #{pre,jdbcType=INTEGER},
+      </if>
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="merId != null">
+        #{merId,jdbcType=INTEGER},
+      </if>
+      <if test="freightId != null">
+        #{freightId,jdbcType=INTEGER},
+      </if>
+      <if test="typeId != null">
+        #{typeId,jdbcType=TINYINT},
+      </if>
+      <if test="sketch != null">
+        #{sketch,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null">
+        #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="tags != null">
+        #{tags,jdbcType=VARCHAR},
+      </if>
+      <if test="marque != null">
+        #{marque,jdbcType=VARCHAR},
+      </if>
+      <if test="barcode != null">
+        #{barcode,jdbcType=VARCHAR},
+      </if>
+      <if test="brandId != null">
+        #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="virtual != null">
+        #{virtual,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="marketPrice != null">
+        #{marketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="integral != null">
+        #{integral,jdbcType=INTEGER},
+      </if>
+      <if test="stock != null">
+        #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="warningStock != null">
+        #{warningStock,jdbcType=INTEGER},
+      </if>
+      <if test="pictureUrl != null">
+        #{pictureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="posters != null">
+        #{posters,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
+      </if>
+      <if test="isIntegral != null">
+        #{isIntegral,jdbcType=CHAR},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isAllowExchage != null">
+        #{isAllowExchage,jdbcType=TINYINT},
+      </if>
+      <if test="like != null">
+        #{like,jdbcType=INTEGER},
+      </if>
+      <if test="intro != null">
+        #{intro,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.goods.entity.Package">
+    update package
+    <set>
+      <if test="packageName != null">
+        package_name = #{packageName,jdbcType=VARCHAR},
+      </if>
+      <if test="packageAlbum != null">
+        package_album = #{packageAlbum,jdbcType=INTEGER},
+      </if>
+      <if test="packageType != null">
+        package_type = #{packageType,jdbcType=INTEGER},
+      </if>
+      <if test="mrId != null">
+        mr_id = #{mrId,jdbcType=INTEGER},
+      </if>
+      <if test="pre != null">
+        pre = #{pre,jdbcType=INTEGER},
+      </if>
+      <if test="categoryId != null">
+        category_id = #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="merId != null">
+        mer_id = #{merId,jdbcType=INTEGER},
+      </if>
+      <if test="freightId != null">
+        freight_id = #{freightId,jdbcType=INTEGER},
+      </if>
+      <if test="typeId != null">
+        type_id = #{typeId,jdbcType=TINYINT},
+      </if>
+      <if test="sketch != null">
+        sketch = #{sketch,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null">
+        keywords = #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="tags != null">
+        tags = #{tags,jdbcType=VARCHAR},
+      </if>
+      <if test="marque != null">
+        marque = #{marque,jdbcType=VARCHAR},
+      </if>
+      <if test="barcode != null">
+        barcode = #{barcode,jdbcType=VARCHAR},
+      </if>
+      <if test="brandId != null">
+        brand_id = #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="virtual != null">
+        virtual = #{virtual,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="marketPrice != null">
+        market_price = #{marketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="integral != null">
+        integral = #{integral,jdbcType=INTEGER},
+      </if>
+      <if test="stock != null">
+        stock = #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="warningStock != null">
+        warning_stock = #{warningStock,jdbcType=INTEGER},
+      </if>
+      <if test="pictureUrl != null">
+        picture_url = #{pictureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="posters != null">
+        posters = #{posters,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
+      <if test="isIntegral != null">
+        is_integral = #{isIntegral,jdbcType=CHAR},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isAllowExchage != null">
+        is_allow_exchage = #{isAllowExchage,jdbcType=TINYINT},
+      </if>
+      <if test="like != null">
+        like = #{like,jdbcType=INTEGER},
+      </if>
+      <if test="intro != null">
+        intro = #{intro,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.suke.czx.modules.goods.entity.Package">
+    update package
+    set package_name = #{packageName,jdbcType=VARCHAR},
+      package_album = #{packageAlbum,jdbcType=INTEGER},
+      package_type = #{packageType,jdbcType=INTEGER},
+      mr_id = #{mrId,jdbcType=INTEGER},
+      pre = #{pre,jdbcType=INTEGER},
+      category_id = #{categoryId,jdbcType=INTEGER},
+      mer_id = #{merId,jdbcType=INTEGER},
+      freight_id = #{freightId,jdbcType=INTEGER},
+      type_id = #{typeId,jdbcType=TINYINT},
+      sketch = #{sketch,jdbcType=VARCHAR},
+      keywords = #{keywords,jdbcType=VARCHAR},
+      tags = #{tags,jdbcType=VARCHAR},
+      marque = #{marque,jdbcType=VARCHAR},
+      barcode = #{barcode,jdbcType=VARCHAR},
+      brand_id = #{brandId,jdbcType=INTEGER},
+      virtual = #{virtual,jdbcType=INTEGER},
+      price = #{price,jdbcType=DECIMAL},
+      market_price = #{marketPrice,jdbcType=DECIMAL},
+      integral = #{integral,jdbcType=INTEGER},
+      stock = #{stock,jdbcType=INTEGER},
+      warning_stock = #{warningStock,jdbcType=INTEGER},
+      picture_url = #{pictureUrl,jdbcType=VARCHAR},
+      posters = #{posters,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      state = #{state,jdbcType=TINYINT},
+      is_integral = #{isIntegral,jdbcType=CHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      is_allow_exchage = #{isAllowExchage,jdbcType=TINYINT},
+      like = #{like,jdbcType=INTEGER},
+      intro = #{intro,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.goods.entity.Package">
+    update package
+    set package_name = #{packageName,jdbcType=VARCHAR},
+      package_album = #{packageAlbum,jdbcType=INTEGER},
+      package_type = #{packageType,jdbcType=INTEGER},
+      mr_id = #{mrId,jdbcType=INTEGER},
+      pre = #{pre,jdbcType=INTEGER},
+      category_id = #{categoryId,jdbcType=INTEGER},
+      mer_id = #{merId,jdbcType=INTEGER},
+      freight_id = #{freightId,jdbcType=INTEGER},
+      type_id = #{typeId,jdbcType=TINYINT},
+      sketch = #{sketch,jdbcType=VARCHAR},
+      keywords = #{keywords,jdbcType=VARCHAR},
+      tags = #{tags,jdbcType=VARCHAR},
+      marque = #{marque,jdbcType=VARCHAR},
+      barcode = #{barcode,jdbcType=VARCHAR},
+      brand_id = #{brandId,jdbcType=INTEGER},
+      virtual = #{virtual,jdbcType=INTEGER},
+      price = #{price,jdbcType=DECIMAL},
+      market_price = #{marketPrice,jdbcType=DECIMAL},
+      integral = #{integral,jdbcType=INTEGER},
+      stock = #{stock,jdbcType=INTEGER},
+      warning_stock = #{warningStock,jdbcType=INTEGER},
+      picture_url = #{pictureUrl,jdbcType=VARCHAR},
+      posters = #{posters,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      state = #{state,jdbcType=TINYINT},
+      is_integral = #{isIntegral,jdbcType=CHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      is_allow_exchage = #{isAllowExchage,jdbcType=TINYINT},
+      like = #{like,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

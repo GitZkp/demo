@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.OrderAppraiseMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.OrderAppraise">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="level" jdbcType="CHAR" property="level" />
+    <result column="desc_star" jdbcType="TINYINT" property="descStar" />
+    <result column="express_star" jdbcType="TINYINT" property="expressStar" />
+    <result column="attitude_star" jdbcType="TINYINT" property="attitudeStar" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="like" jdbcType="INTEGER" property="like" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.suke.czx.modules.pay.entity.OrderAppraise">
+    <result column="info" jdbcType="LONGVARCHAR" property="info" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, product_id, level, desc_star, express_star, attitude_star, created_at, updated_at, 
+    pic, like
+  </sql>
+  <sql id="Blob_Column_List">
+    info
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order_appraise
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from order_appraise
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.OrderAppraise">
+    insert into order_appraise (id, product_id, level, 
+      desc_star, express_star, attitude_star, 
+      created_at, updated_at, pic, 
+      like, info)
+    values (#{id,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, #{level,jdbcType=CHAR}, 
+      #{descStar,jdbcType=TINYINT}, #{expressStar,jdbcType=TINYINT}, #{attitudeStar,jdbcType=TINYINT}, 
+      #{createdAt,jdbcType=TIMESTAMP}, #{updatedAt,jdbcType=TIMESTAMP}, #{pic,jdbcType=VARCHAR}, 
+      #{like,jdbcType=INTEGER}, #{info,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.OrderAppraise">
+    insert into order_appraise
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="descStar != null">
+        desc_star,
+      </if>
+      <if test="expressStar != null">
+        express_star,
+      </if>
+      <if test="attitudeStar != null">
+        attitude_star,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="updatedAt != null">
+        updated_at,
+      </if>
+      <if test="pic != null">
+        pic,
+      </if>
+      <if test="like != null">
+        like,
+      </if>
+      <if test="info != null">
+        info,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=CHAR},
+      </if>
+      <if test="descStar != null">
+        #{descStar,jdbcType=TINYINT},
+      </if>
+      <if test="expressStar != null">
+        #{expressStar,jdbcType=TINYINT},
+      </if>
+      <if test="attitudeStar != null">
+        #{attitudeStar,jdbcType=TINYINT},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="like != null">
+        #{like,jdbcType=INTEGER},
+      </if>
+      <if test="info != null">
+        #{info,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.OrderAppraise">
+    update order_appraise
+    <set>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=CHAR},
+      </if>
+      <if test="descStar != null">
+        desc_star = #{descStar,jdbcType=TINYINT},
+      </if>
+      <if test="expressStar != null">
+        express_star = #{expressStar,jdbcType=TINYINT},
+      </if>
+      <if test="attitudeStar != null">
+        attitude_star = #{attitudeStar,jdbcType=TINYINT},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="like != null">
+        like = #{like,jdbcType=INTEGER},
+      </if>
+      <if test="info != null">
+        info = #{info,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.suke.czx.modules.pay.entity.OrderAppraise">
+    update order_appraise
+    set product_id = #{productId,jdbcType=INTEGER},
+      level = #{level,jdbcType=CHAR},
+      desc_star = #{descStar,jdbcType=TINYINT},
+      express_star = #{expressStar,jdbcType=TINYINT},
+      attitude_star = #{attitudeStar,jdbcType=TINYINT},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      pic = #{pic,jdbcType=VARCHAR},
+      like = #{like,jdbcType=INTEGER},
+      info = #{info,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.OrderAppraise">
+    update order_appraise
+    set product_id = #{productId,jdbcType=INTEGER},
+      level = #{level,jdbcType=CHAR},
+      desc_star = #{descStar,jdbcType=TINYINT},
+      express_star = #{expressStar,jdbcType=TINYINT},
+      attitude_star = #{attitudeStar,jdbcType=TINYINT},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      pic = #{pic,jdbcType=VARCHAR},
+      like = #{like,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

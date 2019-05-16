@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.MrCashConfigMapper">
+    <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.MrCashConfig">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="target_type" jdbcType="TINYINT" property="targetType" />
+        <result column="target_id" jdbcType="INTEGER" property="targetId" />
+        <result column="acc_type" jdbcType="TINYINT" property="accType" />
+        <result column="bank_no" jdbcType="VARCHAR" property="bankNo" />
+        <result column="acc_user" jdbcType="VARCHAR" property="accUser" />
+        <result column="bank_area" jdbcType="VARCHAR" property="bankArea" />
+        <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+        <result column="delete_flag" jdbcType="TINYINT" property="deleteFlag" />
+        <result column="is_default" jdbcType="TINYINT" property="isDefault" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, target_type, target_id, acc_type, bank_no, acc_user, bank_area, bank_name, created_at, 
+    delete_flag, is_default
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from mr_cash_config
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from mr_cash_config
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.MrCashConfig">
+    insert into mr_cash_config (id, target_type, target_id, 
+      acc_type, bank_no, acc_user, 
+      bank_area, bank_name, created_at, 
+      delete_flag, is_default)
+    values (#{id,jdbcType=INTEGER}, #{targetType,jdbcType=TINYINT}, #{targetId,jdbcType=INTEGER}, 
+      #{accType,jdbcType=TINYINT}, #{bankNo,jdbcType=VARCHAR}, #{accUser,jdbcType=VARCHAR}, 
+      #{bankArea,jdbcType=VARCHAR}, #{bankName,jdbcType=VARCHAR}, #{createdAt,jdbcType=TIMESTAMP}, 
+      #{deleteFlag,jdbcType=TINYINT}, #{isDefault,jdbcType=TINYINT})
+  </insert>
+    <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.MrCashConfig">
+        insert into mr_cash_config
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="targetType != null">
+                target_type,
+            </if>
+            <if test="targetId != null">
+                target_id,
+            </if>
+            <if test="accType != null">
+                acc_type,
+            </if>
+            <if test="bankNo != null">
+                bank_no,
+            </if>
+            <if test="accUser != null">
+                acc_user,
+            </if>
+            <if test="bankArea != null">
+                bank_area,
+            </if>
+            <if test="bankName != null">
+                bank_name,
+            </if>
+            <if test="createdAt != null">
+                created_at,
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag,
+            </if>
+            <if test="isDefault != null">
+                is_default,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="targetType != null">
+                #{targetType,jdbcType=TINYINT},
+            </if>
+            <if test="targetId != null">
+                #{targetId,jdbcType=INTEGER},
+            </if>
+            <if test="accType != null">
+                #{accType,jdbcType=TINYINT},
+            </if>
+            <if test="bankNo != null">
+                #{bankNo,jdbcType=VARCHAR},
+            </if>
+            <if test="accUser != null">
+                #{accUser,jdbcType=VARCHAR},
+            </if>
+            <if test="bankArea != null">
+                #{bankArea,jdbcType=VARCHAR},
+            </if>
+            <if test="bankName != null">
+                #{bankName,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                #{deleteFlag,jdbcType=TINYINT},
+            </if>
+            <if test="isDefault != null">
+                #{isDefault,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.MrCashConfig">
+        update mr_cash_config
+        <set>
+            <if test="targetType != null">
+                target_type = #{targetType,jdbcType=TINYINT},
+            </if>
+            <if test="targetId != null">
+                target_id = #{targetId,jdbcType=INTEGER},
+            </if>
+            <if test="accType != null">
+                acc_type = #{accType,jdbcType=TINYINT},
+            </if>
+            <if test="bankNo != null">
+                bank_no = #{bankNo,jdbcType=VARCHAR},
+            </if>
+            <if test="accUser != null">
+                acc_user = #{accUser,jdbcType=VARCHAR},
+            </if>
+            <if test="bankArea != null">
+                bank_area = #{bankArea,jdbcType=VARCHAR},
+            </if>
+            <if test="bankName != null">
+                bank_name = #{bankName,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag = #{deleteFlag,jdbcType=TINYINT},
+            </if>
+            <if test="isDefault != null">
+                is_default = #{isDefault,jdbcType=TINYINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.MrCashConfig">
+    update mr_cash_config
+    set target_type = #{targetType,jdbcType=TINYINT},
+      target_id = #{targetId,jdbcType=INTEGER},
+      acc_type = #{accType,jdbcType=TINYINT},
+      bank_no = #{bankNo,jdbcType=VARCHAR},
+      acc_user = #{accUser,jdbcType=VARCHAR},
+      bank_area = #{bankArea,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      is_default = #{isDefault,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

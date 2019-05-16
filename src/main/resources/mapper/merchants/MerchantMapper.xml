@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.merchants.dao.MerchantMapper">
+    <resultMap id="BaseResultMap" type="com.suke.czx.modules.merchants.entity.Merchant">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="mr_sn" jdbcType="INTEGER" property="mrSn" />
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="org_id" jdbcType="BIGINT" property="orgId" />
+        <result column="org_name" jdbcType="VARCHAR" property="orgName" />
+        <result column="area_path" jdbcType="VARCHAR" property="areaPath" />
+        <result column="area_id" jdbcType="INTEGER" property="areaId" />
+        <result column="is_self" jdbcType="TINYINT" property="isSelf" />
+        <result column="mr_name" jdbcType="VARCHAR" property="mrName" />
+        <result column="mr_keeper" jdbcType="VARCHAR" property="mrKeeper" />
+        <result column="mr_img" jdbcType="VARCHAR" property="mrImg" />
+        <result column="mr_tel" jdbcType="VARCHAR" property="mrTel" />
+        <result column="mr_address" jdbcType="VARCHAR" property="mrAddress" />
+        <result column="mr_money" jdbcType="DECIMAL" property="mrMoney" />
+        <result column="bank" jdbcType="VARCHAR" property="bank" />
+        <result column="bank_keeper" jdbcType="VARCHAR" property="bankKeeper" />
+        <result column="bank_name" jdbcType="VARCHAR" property="bankName" />
+        <result column="bank_area" jdbcType="VARCHAR" property="bankArea" />
+        <result column="mr_status" jdbcType="TINYINT" property="mrStatus" />
+        <result column="status_desc" jdbcType="VARCHAR" property="statusDesc" />
+        <result column="brand" jdbcType="VARCHAR" property="brand" />
+        <result column="keywords" jdbcType="VARCHAR" property="keywords" />
+        <result column="tags" jdbcType="VARCHAR" property="tags" />
+        <result column="pic" jdbcType="VARCHAR" property="pic" />
+        <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+        <result column="delete_flag" jdbcType="TINYINT" property="deleteFlag" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, mr_sn, user_id, org_id, org_name, area_path, area_id, is_self, mr_name, mr_keeper, 
+    mr_img, mr_tel, mr_address, mr_money, bank, bank_keeper, bank_name, bank_area, mr_status, 
+    status_desc, brand, keywords, tags, pic, category_id, created_at, delete_flag
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from merchant
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from merchant
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.suke.czx.modules.merchants.entity.Merchant">
+    insert into merchant (id, mr_sn, user_id, 
+      org_id, org_name, area_path, 
+      area_id, is_self, mr_name, 
+      mr_keeper, mr_img, mr_tel, 
+      mr_address, mr_money, bank, 
+      bank_keeper, bank_name, bank_area, 
+      mr_status, status_desc, brand, 
+      keywords, tags, pic, 
+      category_id, created_at, delete_flag
+      )
+    values (#{id,jdbcType=INTEGER}, #{mrSn,jdbcType=INTEGER}, #{userId,jdbcType=BIGINT}, 
+      #{orgId,jdbcType=BIGINT}, #{orgName,jdbcType=VARCHAR}, #{areaPath,jdbcType=VARCHAR}, 
+      #{areaId,jdbcType=INTEGER}, #{isSelf,jdbcType=TINYINT}, #{mrName,jdbcType=VARCHAR}, 
+      #{mrKeeper,jdbcType=VARCHAR}, #{mrImg,jdbcType=VARCHAR}, #{mrTel,jdbcType=VARCHAR}, 
+      #{mrAddress,jdbcType=VARCHAR}, #{mrMoney,jdbcType=DECIMAL}, #{bank,jdbcType=VARCHAR}, 
+      #{bankKeeper,jdbcType=VARCHAR}, #{bankName,jdbcType=VARCHAR}, #{bankArea,jdbcType=VARCHAR}, 
+      #{mrStatus,jdbcType=TINYINT}, #{statusDesc,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR}, 
+      #{keywords,jdbcType=VARCHAR}, #{tags,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR}, 
+      #{categoryId,jdbcType=BIGINT}, #{createdAt,jdbcType=TIMESTAMP}, #{deleteFlag,jdbcType=TINYINT}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.suke.czx.modules.merchants.entity.Merchant">
+        insert into merchant
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="mrSn != null">
+                mr_sn,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="orgId != null">
+                org_id,
+            </if>
+            <if test="orgName != null">
+                org_name,
+            </if>
+            <if test="areaPath != null">
+                area_path,
+            </if>
+            <if test="areaId != null">
+                area_id,
+            </if>
+            <if test="isSelf != null">
+                is_self,
+            </if>
+            <if test="mrName != null">
+                mr_name,
+            </if>
+            <if test="mrKeeper != null">
+                mr_keeper,
+            </if>
+            <if test="mrImg != null">
+                mr_img,
+            </if>
+            <if test="mrTel != null">
+                mr_tel,
+            </if>
+            <if test="mrAddress != null">
+                mr_address,
+            </if>
+            <if test="mrMoney != null">
+                mr_money,
+            </if>
+            <if test="bank != null">
+                bank,
+            </if>
+            <if test="bankKeeper != null">
+                bank_keeper,
+            </if>
+            <if test="bankName != null">
+                bank_name,
+            </if>
+            <if test="bankArea != null">
+                bank_area,
+            </if>
+            <if test="mrStatus != null">
+                mr_status,
+            </if>
+            <if test="statusDesc != null">
+                status_desc,
+            </if>
+            <if test="brand != null">
+                brand,
+            </if>
+            <if test="keywords != null">
+                keywords,
+            </if>
+            <if test="tags != null">
+                tags,
+            </if>
+            <if test="pic != null">
+                pic,
+            </if>
+            <if test="categoryId != null">
+                category_id,
+            </if>
+            <if test="createdAt != null">
+                created_at,
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="mrSn != null">
+                #{mrSn,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="orgId != null">
+                #{orgId,jdbcType=BIGINT},
+            </if>
+            <if test="orgName != null">
+                #{orgName,jdbcType=VARCHAR},
+            </if>
+            <if test="areaPath != null">
+                #{areaPath,jdbcType=VARCHAR},
+            </if>
+            <if test="areaId != null">
+                #{areaId,jdbcType=INTEGER},
+            </if>
+            <if test="isSelf != null">
+                #{isSelf,jdbcType=TINYINT},
+            </if>
+            <if test="mrName != null">
+                #{mrName,jdbcType=VARCHAR},
+            </if>
+            <if test="mrKeeper != null">
+                #{mrKeeper,jdbcType=VARCHAR},
+            </if>
+            <if test="mrImg != null">
+                #{mrImg,jdbcType=VARCHAR},
+            </if>
+            <if test="mrTel != null">
+                #{mrTel,jdbcType=VARCHAR},
+            </if>
+            <if test="mrAddress != null">
+                #{mrAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="mrMoney != null">
+                #{mrMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="bank != null">
+                #{bank,jdbcType=VARCHAR},
+            </if>
+            <if test="bankKeeper != null">
+                #{bankKeeper,jdbcType=VARCHAR},
+            </if>
+            <if test="bankName != null">
+                #{bankName,jdbcType=VARCHAR},
+            </if>
+            <if test="bankArea != null">
+                #{bankArea,jdbcType=VARCHAR},
+            </if>
+            <if test="mrStatus != null">
+                #{mrStatus,jdbcType=TINYINT},
+            </if>
+            <if test="statusDesc != null">
+                #{statusDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="brand != null">
+                #{brand,jdbcType=VARCHAR},
+            </if>
+            <if test="keywords != null">
+                #{keywords,jdbcType=VARCHAR},
+            </if>
+            <if test="tags != null">
+                #{tags,jdbcType=VARCHAR},
+            </if>
+            <if test="pic != null">
+                #{pic,jdbcType=VARCHAR},
+            </if>
+            <if test="categoryId != null">
+                #{categoryId,jdbcType=BIGINT},
+            </if>
+            <if test="createdAt != null">
+                #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                #{deleteFlag,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.merchants.entity.Merchant">
+        update merchant
+        <set>
+            <if test="mrSn != null">
+                mr_sn = #{mrSn,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="orgId != null">
+                org_id = #{orgId,jdbcType=BIGINT},
+            </if>
+            <if test="orgName != null">
+                org_name = #{orgName,jdbcType=VARCHAR},
+            </if>
+            <if test="areaPath != null">
+                area_path = #{areaPath,jdbcType=VARCHAR},
+            </if>
+            <if test="areaId != null">
+                area_id = #{areaId,jdbcType=INTEGER},
+            </if>
+            <if test="isSelf != null">
+                is_self = #{isSelf,jdbcType=TINYINT},
+            </if>
+            <if test="mrName != null">
+                mr_name = #{mrName,jdbcType=VARCHAR},
+            </if>
+            <if test="mrKeeper != null">
+                mr_keeper = #{mrKeeper,jdbcType=VARCHAR},
+            </if>
+            <if test="mrImg != null">
+                mr_img = #{mrImg,jdbcType=VARCHAR},
+            </if>
+            <if test="mrTel != null">
+                mr_tel = #{mrTel,jdbcType=VARCHAR},
+            </if>
+            <if test="mrAddress != null">
+                mr_address = #{mrAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="mrMoney != null">
+                mr_money = #{mrMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="bank != null">
+                bank = #{bank,jdbcType=VARCHAR},
+            </if>
+            <if test="bankKeeper != null">
+                bank_keeper = #{bankKeeper,jdbcType=VARCHAR},
+            </if>
+            <if test="bankName != null">
+                bank_name = #{bankName,jdbcType=VARCHAR},
+            </if>
+            <if test="bankArea != null">
+                bank_area = #{bankArea,jdbcType=VARCHAR},
+            </if>
+            <if test="mrStatus != null">
+                mr_status = #{mrStatus,jdbcType=TINYINT},
+            </if>
+            <if test="statusDesc != null">
+                status_desc = #{statusDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="brand != null">
+                brand = #{brand,jdbcType=VARCHAR},
+            </if>
+            <if test="keywords != null">
+                keywords = #{keywords,jdbcType=VARCHAR},
+            </if>
+            <if test="tags != null">
+                tags = #{tags,jdbcType=VARCHAR},
+            </if>
+            <if test="pic != null">
+                pic = #{pic,jdbcType=VARCHAR},
+            </if>
+            <if test="categoryId != null">
+                category_id = #{categoryId,jdbcType=BIGINT},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag = #{deleteFlag,jdbcType=TINYINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.merchants.entity.Merchant">
+    update merchant
+    set mr_sn = #{mrSn,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=BIGINT},
+      org_id = #{orgId,jdbcType=BIGINT},
+      org_name = #{orgName,jdbcType=VARCHAR},
+      area_path = #{areaPath,jdbcType=VARCHAR},
+      area_id = #{areaId,jdbcType=INTEGER},
+      is_self = #{isSelf,jdbcType=TINYINT},
+      mr_name = #{mrName,jdbcType=VARCHAR},
+      mr_keeper = #{mrKeeper,jdbcType=VARCHAR},
+      mr_img = #{mrImg,jdbcType=VARCHAR},
+      mr_tel = #{mrTel,jdbcType=VARCHAR},
+      mr_address = #{mrAddress,jdbcType=VARCHAR},
+      mr_money = #{mrMoney,jdbcType=DECIMAL},
+      bank = #{bank,jdbcType=VARCHAR},
+      bank_keeper = #{bankKeeper,jdbcType=VARCHAR},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      bank_area = #{bankArea,jdbcType=VARCHAR},
+      mr_status = #{mrStatus,jdbcType=TINYINT},
+      status_desc = #{statusDesc,jdbcType=VARCHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      keywords = #{keywords,jdbcType=VARCHAR},
+      tags = #{tags,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      category_id = #{categoryId,jdbcType=BIGINT},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      delete_flag = #{deleteFlag,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

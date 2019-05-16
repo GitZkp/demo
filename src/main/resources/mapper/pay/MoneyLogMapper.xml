@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.MoneyLogMapper">
+    <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.MoneyLog">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="target_type" jdbcType="TINYINT" property="targetType" />
+        <result column="target_id" jdbcType="INTEGER" property="targetId" />
+        <result column="data_id" jdbcType="INTEGER" property="dataId" />
+        <result column="data_type" jdbcType="TINYINT" property="dataType" />
+        <result column="money_type" jdbcType="TINYINT" property="moneyType" />
+        <result column="money" jdbcType="DECIMAL" property="money" />
+        <result column="tarde_no" jdbcType="VARCHAR" property="tardeNo" />
+        <result column="pay_type" jdbcType="TINYINT" property="payType" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, target_type, target_id, data_id, data_type, money_type, money, tarde_no, pay_type, 
+    remark, created_at
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from money_log
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from money_log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.MoneyLog">
+    insert into money_log (id, target_type, target_id, 
+      data_id, data_type, money_type, 
+      money, tarde_no, pay_type, 
+      remark, created_at)
+    values (#{id,jdbcType=INTEGER}, #{targetType,jdbcType=TINYINT}, #{targetId,jdbcType=INTEGER}, 
+      #{dataId,jdbcType=INTEGER}, #{dataType,jdbcType=TINYINT}, #{moneyType,jdbcType=TINYINT}, 
+      #{money,jdbcType=DECIMAL}, #{tardeNo,jdbcType=VARCHAR}, #{payType,jdbcType=TINYINT}, 
+      #{remark,jdbcType=VARCHAR}, #{createdAt,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.MoneyLog">
+        insert into money_log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="targetType != null">
+                target_type,
+            </if>
+            <if test="targetId != null">
+                target_id,
+            </if>
+            <if test="dataId != null">
+                data_id,
+            </if>
+            <if test="dataType != null">
+                data_type,
+            </if>
+            <if test="moneyType != null">
+                money_type,
+            </if>
+            <if test="money != null">
+                money,
+            </if>
+            <if test="tardeNo != null">
+                tarde_no,
+            </if>
+            <if test="payType != null">
+                pay_type,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="createdAt != null">
+                created_at,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="targetType != null">
+                #{targetType,jdbcType=TINYINT},
+            </if>
+            <if test="targetId != null">
+                #{targetId,jdbcType=INTEGER},
+            </if>
+            <if test="dataId != null">
+                #{dataId,jdbcType=INTEGER},
+            </if>
+            <if test="dataType != null">
+                #{dataType,jdbcType=TINYINT},
+            </if>
+            <if test="moneyType != null">
+                #{moneyType,jdbcType=TINYINT},
+            </if>
+            <if test="money != null">
+                #{money,jdbcType=DECIMAL},
+            </if>
+            <if test="tardeNo != null">
+                #{tardeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="payType != null">
+                #{payType,jdbcType=TINYINT},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.MoneyLog">
+        update money_log
+        <set>
+            <if test="targetType != null">
+                target_type = #{targetType,jdbcType=TINYINT},
+            </if>
+            <if test="targetId != null">
+                target_id = #{targetId,jdbcType=INTEGER},
+            </if>
+            <if test="dataId != null">
+                data_id = #{dataId,jdbcType=INTEGER},
+            </if>
+            <if test="dataType != null">
+                data_type = #{dataType,jdbcType=TINYINT},
+            </if>
+            <if test="moneyType != null">
+                money_type = #{moneyType,jdbcType=TINYINT},
+            </if>
+            <if test="money != null">
+                money = #{money,jdbcType=DECIMAL},
+            </if>
+            <if test="tardeNo != null">
+                tarde_no = #{tardeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="payType != null">
+                pay_type = #{payType,jdbcType=TINYINT},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.MoneyLog">
+    update money_log
+    set target_type = #{targetType,jdbcType=TINYINT},
+      target_id = #{targetId,jdbcType=INTEGER},
+      data_id = #{dataId,jdbcType=INTEGER},
+      data_type = #{dataType,jdbcType=TINYINT},
+      money_type = #{moneyType,jdbcType=TINYINT},
+      money = #{money,jdbcType=DECIMAL},
+      tarde_no = #{tardeNo,jdbcType=VARCHAR},
+      pay_type = #{payType,jdbcType=TINYINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

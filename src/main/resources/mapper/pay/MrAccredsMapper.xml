@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.MrAccredsMapper">
+    <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.MrAccreds">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="acc_name" jdbcType="VARCHAR" property="accName" />
+        <result column="acc_img" jdbcType="VARCHAR" property="accImg" />
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+        <result column="delete_flag" jdbcType="TINYINT" property="deleteFlag" />
+        <result column="acc_type" jdbcType="TINYINT" property="accType" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, acc_name, acc_img, created_at, delete_flag, acc_type
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from mr_accreds
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from mr_accreds
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.MrAccreds">
+    insert into mr_accreds (id, acc_name, acc_img, 
+      created_at, delete_flag, acc_type
+      )
+    values (#{id,jdbcType=INTEGER}, #{accName,jdbcType=VARCHAR}, #{accImg,jdbcType=VARCHAR}, 
+      #{createdAt,jdbcType=TIMESTAMP}, #{deleteFlag,jdbcType=TINYINT}, #{accType,jdbcType=TINYINT}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.MrAccreds">
+        insert into mr_accreds
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="accName != null">
+                acc_name,
+            </if>
+            <if test="accImg != null">
+                acc_img,
+            </if>
+            <if test="createdAt != null">
+                created_at,
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag,
+            </if>
+            <if test="accType != null">
+                acc_type,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="accName != null">
+                #{accName,jdbcType=VARCHAR},
+            </if>
+            <if test="accImg != null">
+                #{accImg,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                #{deleteFlag,jdbcType=TINYINT},
+            </if>
+            <if test="accType != null">
+                #{accType,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.MrAccreds">
+        update mr_accreds
+        <set>
+            <if test="accName != null">
+                acc_name = #{accName,jdbcType=VARCHAR},
+            </if>
+            <if test="accImg != null">
+                acc_img = #{accImg,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteFlag != null">
+                delete_flag = #{deleteFlag,jdbcType=TINYINT},
+            </if>
+            <if test="accType != null">
+                acc_type = #{accType,jdbcType=TINYINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.MrAccreds">
+    update mr_accreds
+    set acc_name = #{accName,jdbcType=VARCHAR},
+      acc_img = #{accImg,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      delete_flag = #{deleteFlag,jdbcType=TINYINT},
+      acc_type = #{accType,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

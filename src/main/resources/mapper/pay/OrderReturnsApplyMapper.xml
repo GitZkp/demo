@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.OrderReturnsApplyMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.OrderReturnsApply">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="order_detail_id" jdbcType="VARCHAR" property="orderDetailId" />
+    <result column="return_no" jdbcType="VARCHAR" property="returnNo" />
+    <result column="member_id" jdbcType="INTEGER" property="memberId" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="product_status" jdbcType="TINYINT" property="productStatus" />
+    <result column="why" jdbcType="VARCHAR" property="why" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="audit_time" jdbcType="INTEGER" property="auditTime" />
+    <result column="audit_why" jdbcType="VARCHAR" property="auditWhy" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.suke.czx.modules.pay.entity.OrderReturnsApply">
+    <result column="note" jdbcType="LONGVARCHAR" property="note" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, order_no, order_detail_id, return_no, member_id, state, product_status, why, 
+    status, audit_time, audit_why, created_at, updated_at
+  </sql>
+  <sql id="Blob_Column_List">
+    note
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order_returns_apply
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from order_returns_apply
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.OrderReturnsApply">
+    insert into order_returns_apply (id, order_no, order_detail_id, 
+      return_no, member_id, state, 
+      product_status, why, status, 
+      audit_time, audit_why, created_at, 
+      updated_at, note)
+    values (#{id,jdbcType=INTEGER}, #{orderNo,jdbcType=VARCHAR}, #{orderDetailId,jdbcType=VARCHAR}, 
+      #{returnNo,jdbcType=VARCHAR}, #{memberId,jdbcType=INTEGER}, #{state,jdbcType=TINYINT}, 
+      #{productStatus,jdbcType=TINYINT}, #{why,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{auditTime,jdbcType=INTEGER}, #{auditWhy,jdbcType=VARCHAR}, #{createdAt,jdbcType=TIMESTAMP}, 
+      #{updatedAt,jdbcType=TIMESTAMP}, #{note,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.OrderReturnsApply">
+    insert into order_returns_apply
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderNo != null">
+        order_no,
+      </if>
+      <if test="orderDetailId != null">
+        order_detail_id,
+      </if>
+      <if test="returnNo != null">
+        return_no,
+      </if>
+      <if test="memberId != null">
+        member_id,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="productStatus != null">
+        product_status,
+      </if>
+      <if test="why != null">
+        why,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="auditTime != null">
+        audit_time,
+      </if>
+      <if test="auditWhy != null">
+        audit_why,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="updatedAt != null">
+        updated_at,
+      </if>
+      <if test="note != null">
+        note,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="orderNo != null">
+        #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderDetailId != null">
+        #{orderDetailId,jdbcType=VARCHAR},
+      </if>
+      <if test="returnNo != null">
+        #{returnNo,jdbcType=VARCHAR},
+      </if>
+      <if test="memberId != null">
+        #{memberId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
+      </if>
+      <if test="productStatus != null">
+        #{productStatus,jdbcType=TINYINT},
+      </if>
+      <if test="why != null">
+        #{why,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="auditTime != null">
+        #{auditTime,jdbcType=INTEGER},
+      </if>
+      <if test="auditWhy != null">
+        #{auditWhy,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.OrderReturnsApply">
+    update order_returns_apply
+    <set>
+      <if test="orderNo != null">
+        order_no = #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orderDetailId != null">
+        order_detail_id = #{orderDetailId,jdbcType=VARCHAR},
+      </if>
+      <if test="returnNo != null">
+        return_no = #{returnNo,jdbcType=VARCHAR},
+      </if>
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
+      <if test="productStatus != null">
+        product_status = #{productStatus,jdbcType=TINYINT},
+      </if>
+      <if test="why != null">
+        why = #{why,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="auditTime != null">
+        audit_time = #{auditTime,jdbcType=INTEGER},
+      </if>
+      <if test="auditWhy != null">
+        audit_why = #{auditWhy,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="note != null">
+        note = #{note,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.suke.czx.modules.pay.entity.OrderReturnsApply">
+    update order_returns_apply
+    set order_no = #{orderNo,jdbcType=VARCHAR},
+      order_detail_id = #{orderDetailId,jdbcType=VARCHAR},
+      return_no = #{returnNo,jdbcType=VARCHAR},
+      member_id = #{memberId,jdbcType=INTEGER},
+      state = #{state,jdbcType=TINYINT},
+      product_status = #{productStatus,jdbcType=TINYINT},
+      why = #{why,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      audit_time = #{auditTime,jdbcType=INTEGER},
+      audit_why = #{auditWhy,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      note = #{note,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.OrderReturnsApply">
+    update order_returns_apply
+    set order_no = #{orderNo,jdbcType=VARCHAR},
+      order_detail_id = #{orderDetailId,jdbcType=VARCHAR},
+      return_no = #{returnNo,jdbcType=VARCHAR},
+      member_id = #{memberId,jdbcType=INTEGER},
+      state = #{state,jdbcType=TINYINT},
+      product_status = #{productStatus,jdbcType=TINYINT},
+      why = #{why,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      audit_time = #{auditTime,jdbcType=INTEGER},
+      audit_why = #{auditWhy,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

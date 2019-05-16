@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.app.dao.TbAppUpdateMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.app.entity.TbAppUpdate">
+    <result column="appid" jdbcType="VARCHAR" property="appid" />
+    <result column="update_content" jdbcType="VARCHAR" property="updateContent" />
+    <result column="version_code" jdbcType="INTEGER" property="versionCode" />
+    <result column="version_name" jdbcType="VARCHAR" property="versionName" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="app_file_name" jdbcType="VARCHAR" property="appFileName" />
+    <result column="md5" jdbcType="VARCHAR" property="md5" />
+    <result column="size" jdbcType="VARCHAR" property="size" />
+    <result column="is_force" jdbcType="VARCHAR" property="isForce" />
+    <result column="is_ignorable" jdbcType="VARCHAR" property="isIgnorable" />
+    <result column="is_silent" jdbcType="VARCHAR" property="isSilent" />
+    <result column="upload_time" jdbcType="TIMESTAMP" property="uploadTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.suke.czx.modules.app.entity.TbAppUpdate">
+    insert into tb_app_update (appid, update_content, version_code, 
+      version_name, url, app_file_name, 
+      md5, size, is_force, 
+      is_ignorable, is_silent, upload_time
+      )
+    values (#{appid,jdbcType=VARCHAR}, #{updateContent,jdbcType=VARCHAR}, #{versionCode,jdbcType=INTEGER}, 
+      #{versionName,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{appFileName,jdbcType=VARCHAR}, 
+      #{md5,jdbcType=VARCHAR}, #{size,jdbcType=VARCHAR}, #{isForce,jdbcType=VARCHAR}, 
+      #{isIgnorable,jdbcType=VARCHAR}, #{isSilent,jdbcType=VARCHAR}, #{uploadTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.app.entity.TbAppUpdate">
+    insert into tb_app_update
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="appid != null">
+        appid,
+      </if>
+      <if test="updateContent != null">
+        update_content,
+      </if>
+      <if test="versionCode != null">
+        version_code,
+      </if>
+      <if test="versionName != null">
+        version_name,
+      </if>
+      <if test="url != null">
+        url,
+      </if>
+      <if test="appFileName != null">
+        app_file_name,
+      </if>
+      <if test="md5 != null">
+        md5,
+      </if>
+      <if test="size != null">
+        size,
+      </if>
+      <if test="isForce != null">
+        is_force,
+      </if>
+      <if test="isIgnorable != null">
+        is_ignorable,
+      </if>
+      <if test="isSilent != null">
+        is_silent,
+      </if>
+      <if test="uploadTime != null">
+        upload_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="appid != null">
+        #{appid,jdbcType=VARCHAR},
+      </if>
+      <if test="updateContent != null">
+        #{updateContent,jdbcType=VARCHAR},
+      </if>
+      <if test="versionCode != null">
+        #{versionCode,jdbcType=INTEGER},
+      </if>
+      <if test="versionName != null">
+        #{versionName,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="appFileName != null">
+        #{appFileName,jdbcType=VARCHAR},
+      </if>
+      <if test="md5 != null">
+        #{md5,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null">
+        #{size,jdbcType=VARCHAR},
+      </if>
+      <if test="isForce != null">
+        #{isForce,jdbcType=VARCHAR},
+      </if>
+      <if test="isIgnorable != null">
+        #{isIgnorable,jdbcType=VARCHAR},
+      </if>
+      <if test="isSilent != null">
+        #{isSilent,jdbcType=VARCHAR},
+      </if>
+      <if test="uploadTime != null">
+        #{uploadTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

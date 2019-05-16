@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.cms.dao.FriendlinksMapper">
+    <resultMap id="BaseResultMap" type="com.suke.czx.modules.cms.entity.Friendlinks">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="img" jdbcType="VARCHAR" property="img" />
+        <result column="link_name" jdbcType="VARCHAR" property="linkName" />
+        <result column="link_url" jdbcType="VARCHAR" property="linkUrl" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, img, link_name, link_url, sort, remark, created_at
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from friendlinks
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from friendlinks
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.suke.czx.modules.cms.entity.Friendlinks">
+    insert into friendlinks (id, img, link_name, 
+      link_url, sort, remark, 
+      created_at)
+    values (#{id,jdbcType=INTEGER}, #{img,jdbcType=VARCHAR}, #{linkName,jdbcType=VARCHAR}, 
+      #{linkUrl,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
+      #{createdAt,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="com.suke.czx.modules.cms.entity.Friendlinks">
+        insert into friendlinks
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                i
+                d,
+            </if>
+            <if test="img != null">
+                img,
+            </if>
+            <if test="linkName != null">
+                link_name,
+            </if>
+            <if test="linkUrl != null">
+                link_url,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="createdAt != null">
+                created_at,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="img != null">
+                #{img,jdbcType=VARCHAR},
+            </if>
+            <if test="linkName != null">
+                #{linkName,jdbcType=VARCHAR},
+            </if>
+            <if test="linkUrl != null">
+                #{linkUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.cms.entity.Friendlinks">
+        update friendlinks
+        <set>
+            <if test="img != null">
+                img = #{img,jdbcType=VARCHAR},
+            </if>
+            <if test="linkName != null">
+                link_name = #{linkName,jdbcType=VARCHAR},
+            </if>
+            <if test="linkUrl != null">
+                link_url = #{linkUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.cms.entity.Friendlinks">
+    update friendlinks
+    set img = #{img,jdbcType=VARCHAR},
+      link_name = #{linkName,jdbcType=VARCHAR},
+      link_url = #{linkUrl,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

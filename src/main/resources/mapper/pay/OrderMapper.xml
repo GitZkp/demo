@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.OrderMapper">
+    <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.Order">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+        <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
+        <result column="member_id" jdbcType="INTEGER" property="memberId" />
+        <result column="supplier_id" jdbcType="INTEGER" property="supplierId" />
+        <result column="supplier_name" jdbcType="VARCHAR" property="supplierName" />
+        <result column="order_status" jdbcType="TINYINT" property="orderStatus" />
+        <result column="after_status" jdbcType="TINYINT" property="afterStatus" />
+        <result column="product_count" jdbcType="INTEGER" property="productCount" />
+        <result column="product_amount_total" jdbcType="DECIMAL" property="productAmountTotal" />
+        <result column="order_amount_total" jdbcType="DECIMAL" property="orderAmountTotal" />
+        <result column="logistics_fee" jdbcType="DECIMAL" property="logisticsFee" />
+        <result column="address_id" jdbcType="INTEGER" property="addressId" />
+        <result column="pay_channel" jdbcType="TINYINT" property="payChannel" />
+        <result column="out_trade_no" jdbcType="VARCHAR" property="outTradeNo" />
+        <result column="escrow_trade_no" jdbcType="VARCHAR" property="escrowTradeNo" />
+        <result column="pay_time" jdbcType="INTEGER" property="payTime" />
+        <result column="delivery_time" jdbcType="INTEGER" property="deliveryTime" />
+        <result column="order_settlement_status" jdbcType="TINYINT" property="orderSettlementStatus" />
+        <result column="order_settlement_time" jdbcType="INTEGER" property="orderSettlementTime" />
+        <result column="is_package" jdbcType="CHAR" property="isPackage" />
+        <result column="is_integral" jdbcType="CHAR" property="isIntegral" />
+        <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+        <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+        <result column="deleted_at" jdbcType="TIMESTAMP" property="deletedAt" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, order_no, order_sn, member_id, supplier_id, supplier_name, order_status, after_status, 
+    product_count, product_amount_total, order_amount_total, logistics_fee, address_id, 
+    pay_channel, out_trade_no, escrow_trade_no, pay_time, delivery_time, order_settlement_status, 
+    order_settlement_time, is_package, is_integral, created_at, updated_at, deleted_at
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from order
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.Order">
+    insert into order (id, order_no, order_sn, 
+      member_id, supplier_id, supplier_name, 
+      order_status, after_status, product_count, 
+      product_amount_total, order_amount_total, logistics_fee, 
+      address_id, pay_channel, out_trade_no, 
+      escrow_trade_no, pay_time, delivery_time, 
+      order_settlement_status, order_settlement_time, 
+      is_package, is_integral, created_at, 
+      updated_at, deleted_at)
+    values (#{id,jdbcType=INTEGER}, #{orderNo,jdbcType=VARCHAR}, #{orderSn,jdbcType=VARCHAR}, 
+      #{memberId,jdbcType=INTEGER}, #{supplierId,jdbcType=INTEGER}, #{supplierName,jdbcType=VARCHAR}, 
+      #{orderStatus,jdbcType=TINYINT}, #{afterStatus,jdbcType=TINYINT}, #{productCount,jdbcType=INTEGER}, 
+      #{productAmountTotal,jdbcType=DECIMAL}, #{orderAmountTotal,jdbcType=DECIMAL}, #{logisticsFee,jdbcType=DECIMAL}, 
+      #{addressId,jdbcType=INTEGER}, #{payChannel,jdbcType=TINYINT}, #{outTradeNo,jdbcType=VARCHAR}, 
+      #{escrowTradeNo,jdbcType=VARCHAR}, #{payTime,jdbcType=INTEGER}, #{deliveryTime,jdbcType=INTEGER}, 
+      #{orderSettlementStatus,jdbcType=TINYINT}, #{orderSettlementTime,jdbcType=INTEGER}, 
+      #{isPackage,jdbcType=CHAR}, #{isIntegral,jdbcType=CHAR}, #{createdAt,jdbcType=TIMESTAMP}, 
+      #{updatedAt,jdbcType=TIMESTAMP}, #{deletedAt,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.Order">
+        insert into order
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="orderNo != null">
+                order_no,
+            </if>
+            <if test="orderSn != null">
+                order_sn,
+            </if>
+            <if test="memberId != null">
+                member_id,
+            </if>
+            <if test="supplierId != null">
+                supplier_id,
+            </if>
+            <if test="supplierName != null">
+                supplier_name,
+            </if>
+            <if test="orderStatus != null">
+                order_status,
+            </if>
+            <if test="afterStatus != null">
+                after_status,
+            </if>
+            <if test="productCount != null">
+                product_count,
+            </if>
+            <if test="productAmountTotal != null">
+                product_amount_total,
+            </if>
+            <if test="orderAmountTotal != null">
+                order_amount_total,
+            </if>
+            <if test="logisticsFee != null">
+                logistics_fee,
+            </if>
+            <if test="addressId != null">
+                address_id,
+            </if>
+            <if test="payChannel != null">
+                pay_channel,
+            </if>
+            <if test="outTradeNo != null">
+                out_trade_no,
+            </if>
+            <if test="escrowTradeNo != null">
+                escrow_trade_no,
+            </if>
+            <if test="payTime != null">
+                pay_time,
+            </if>
+            <if test="deliveryTime != null">
+                delivery_time,
+            </if>
+            <if test="orderSettlementStatus != null">
+                order_settlement_status,
+            </if>
+            <if test="orderSettlementTime != null">
+                order_settlement_time,
+            </if>
+            <if test="isPackage != null">
+                is_package,
+            </if>
+            <if test="isIntegral != null">
+                is_integral,
+            </if>
+            <if test="createdAt != null">
+                created_at,
+            </if>
+            <if test="updatedAt != null">
+                updated_at,
+            </if>
+            <if test="deletedAt != null">
+                deleted_at,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="orderNo != null">
+                #{orderNo,jdbcType=VARCHAR},
+            </if>
+            <if test="orderSn != null">
+                #{orderSn,jdbcType=VARCHAR},
+            </if>
+            <if test="memberId != null">
+                #{memberId,jdbcType=INTEGER},
+            </if>
+            <if test="supplierId != null">
+                #{supplierId,jdbcType=INTEGER},
+            </if>
+            <if test="supplierName != null">
+                #{supplierName,jdbcType=VARCHAR},
+            </if>
+            <if test="orderStatus != null">
+                #{orderStatus,jdbcType=TINYINT},
+            </if>
+            <if test="afterStatus != null">
+                #{afterStatus,jdbcType=TINYINT},
+            </if>
+            <if test="productCount != null">
+                #{productCount,jdbcType=INTEGER},
+            </if>
+            <if test="productAmountTotal != null">
+                #{productAmountTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="orderAmountTotal != null">
+                #{orderAmountTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="logisticsFee != null">
+                #{logisticsFee,jdbcType=DECIMAL},
+            </if>
+            <if test="addressId != null">
+                #{addressId,jdbcType=INTEGER},
+            </if>
+            <if test="payChannel != null">
+                #{payChannel,jdbcType=TINYINT},
+            </if>
+            <if test="outTradeNo != null">
+                #{outTradeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="escrowTradeNo != null">
+                #{escrowTradeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="payTime != null">
+                #{payTime,jdbcType=INTEGER},
+            </if>
+            <if test="deliveryTime != null">
+                #{deliveryTime,jdbcType=INTEGER},
+            </if>
+            <if test="orderSettlementStatus != null">
+                #{orderSettlementStatus,jdbcType=TINYINT},
+            </if>
+            <if test="orderSettlementTime != null">
+                #{orderSettlementTime,jdbcType=INTEGER},
+            </if>
+            <if test="isPackage != null">
+                #{isPackage,jdbcType=CHAR},
+            </if>
+            <if test="isIntegral != null">
+                #{isIntegral,jdbcType=CHAR},
+            </if>
+            <if test="createdAt != null">
+                #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updatedAt != null">
+                #{updatedAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deletedAt != null">
+                #{deletedAt,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.Order">
+        update order
+        <set>
+            <if test="orderNo != null">
+                order_no = #{orderNo,jdbcType=VARCHAR},
+            </if>
+            <if test="orderSn != null">
+                order_sn = #{orderSn,jdbcType=VARCHAR},
+            </if>
+            <if test="memberId != null">
+                member_id = #{memberId,jdbcType=INTEGER},
+            </if>
+            <if test="supplierId != null">
+                supplier_id = #{supplierId,jdbcType=INTEGER},
+            </if>
+            <if test="supplierName != null">
+                supplier_name = #{supplierName,jdbcType=VARCHAR},
+            </if>
+            <if test="orderStatus != null">
+                order_status = #{orderStatus,jdbcType=TINYINT},
+            </if>
+            <if test="afterStatus != null">
+                after_status = #{afterStatus,jdbcType=TINYINT},
+            </if>
+            <if test="productCount != null">
+                product_count = #{productCount,jdbcType=INTEGER},
+            </if>
+            <if test="productAmountTotal != null">
+                product_amount_total = #{productAmountTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="orderAmountTotal != null">
+                order_amount_total = #{orderAmountTotal,jdbcType=DECIMAL},
+            </if>
+            <if test="logisticsFee != null">
+                logistics_fee = #{logisticsFee,jdbcType=DECIMAL},
+            </if>
+            <if test="addressId != null">
+                address_id = #{addressId,jdbcType=INTEGER},
+            </if>
+            <if test="payChannel != null">
+                pay_channel = #{payChannel,jdbcType=TINYINT},
+            </if>
+            <if test="outTradeNo != null">
+                out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="escrowTradeNo != null">
+                escrow_trade_no = #{escrowTradeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="payTime != null">
+                pay_time = #{payTime,jdbcType=INTEGER},
+            </if>
+            <if test="deliveryTime != null">
+                delivery_time = #{deliveryTime,jdbcType=INTEGER},
+            </if>
+            <if test="orderSettlementStatus != null">
+                order_settlement_status = #{orderSettlementStatus,jdbcType=TINYINT},
+            </if>
+            <if test="orderSettlementTime != null">
+                order_settlement_time = #{orderSettlementTime,jdbcType=INTEGER},
+            </if>
+            <if test="isPackage != null">
+                is_package = #{isPackage,jdbcType=CHAR},
+            </if>
+            <if test="isIntegral != null">
+                is_integral = #{isIntegral,jdbcType=CHAR},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deletedAt != null">
+                deleted_at = #{deletedAt,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.Order">
+    update order
+    set order_no = #{orderNo,jdbcType=VARCHAR},
+      order_sn = #{orderSn,jdbcType=VARCHAR},
+      member_id = #{memberId,jdbcType=INTEGER},
+      supplier_id = #{supplierId,jdbcType=INTEGER},
+      supplier_name = #{supplierName,jdbcType=VARCHAR},
+      order_status = #{orderStatus,jdbcType=TINYINT},
+      after_status = #{afterStatus,jdbcType=TINYINT},
+      product_count = #{productCount,jdbcType=INTEGER},
+      product_amount_total = #{productAmountTotal,jdbcType=DECIMAL},
+      order_amount_total = #{orderAmountTotal,jdbcType=DECIMAL},
+      logistics_fee = #{logisticsFee,jdbcType=DECIMAL},
+      address_id = #{addressId,jdbcType=INTEGER},
+      pay_channel = #{payChannel,jdbcType=TINYINT},
+      out_trade_no = #{outTradeNo,jdbcType=VARCHAR},
+      escrow_trade_no = #{escrowTradeNo,jdbcType=VARCHAR},
+      pay_time = #{payTime,jdbcType=INTEGER},
+      delivery_time = #{deliveryTime,jdbcType=INTEGER},
+      order_settlement_status = #{orderSettlementStatus,jdbcType=TINYINT},
+      order_settlement_time = #{orderSettlementTime,jdbcType=INTEGER},
+      is_package = #{isPackage,jdbcType=CHAR},
+      is_integral = #{isIntegral,jdbcType=CHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      deleted_at = #{deletedAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

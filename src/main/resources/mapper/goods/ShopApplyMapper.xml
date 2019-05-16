@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.goods.dao.ShopApplyMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.goods.entity.ShopApply">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="target_type" jdbcType="INTEGER" property="targetType" />
+    <result column="acc_id" jdbcType="INTEGER" property="accId" />
+    <result column="acc_name" jdbcType="INTEGER" property="accName" />
+    <result column="target_id" jdbcType="INTEGER" property="targetId" />
+    <result column="result" jdbcType="INTEGER" property="result" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.suke.czx.modules.goods.entity.ShopApply">
+    <result column="acc_content" jdbcType="LONGVARCHAR" property="accContent" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, target_type, acc_id, acc_name, target_id, result, remark, created_at
+  </sql>
+  <sql id="Blob_Column_List">
+    acc_content
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from shop_apply
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shop_apply
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.suke.czx.modules.goods.entity.ShopApply">
+    insert into shop_apply (id, target_type, acc_id, 
+      acc_name, target_id, result, 
+      remark, created_at, acc_content
+      )
+    values (#{id,jdbcType=INTEGER}, #{targetType,jdbcType=INTEGER}, #{accId,jdbcType=INTEGER}, 
+      #{accName,jdbcType=INTEGER}, #{targetId,jdbcType=INTEGER}, #{result,jdbcType=INTEGER}, 
+      #{remark,jdbcType=VARCHAR}, #{createdAt,jdbcType=TIMESTAMP}, #{accContent,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.goods.entity.ShopApply">
+    insert into shop_apply
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="targetType != null">
+        target_type,
+      </if>
+      <if test="accId != null">
+        acc_id,
+      </if>
+      <if test="accName != null">
+        acc_name,
+      </if>
+      <if test="targetId != null">
+        target_id,
+      </if>
+      <if test="result != null">
+        result,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="accContent != null">
+        acc_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="targetType != null">
+        #{targetType,jdbcType=INTEGER},
+      </if>
+      <if test="accId != null">
+        #{accId,jdbcType=INTEGER},
+      </if>
+      <if test="accName != null">
+        #{accName,jdbcType=INTEGER},
+      </if>
+      <if test="targetId != null">
+        #{targetId,jdbcType=INTEGER},
+      </if>
+      <if test="result != null">
+        #{result,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="accContent != null">
+        #{accContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.goods.entity.ShopApply">
+    update shop_apply
+    <set>
+      <if test="targetType != null">
+        target_type = #{targetType,jdbcType=INTEGER},
+      </if>
+      <if test="accId != null">
+        acc_id = #{accId,jdbcType=INTEGER},
+      </if>
+      <if test="accName != null">
+        acc_name = #{accName,jdbcType=INTEGER},
+      </if>
+      <if test="targetId != null">
+        target_id = #{targetId,jdbcType=INTEGER},
+      </if>
+      <if test="result != null">
+        result = #{result,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="accContent != null">
+        acc_content = #{accContent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.suke.czx.modules.goods.entity.ShopApply">
+    update shop_apply
+    set target_type = #{targetType,jdbcType=INTEGER},
+      acc_id = #{accId,jdbcType=INTEGER},
+      acc_name = #{accName,jdbcType=INTEGER},
+      target_id = #{targetId,jdbcType=INTEGER},
+      result = #{result,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      acc_content = #{accContent,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.goods.entity.ShopApply">
+    update shop_apply
+    set target_type = #{targetType,jdbcType=INTEGER},
+      acc_id = #{accId,jdbcType=INTEGER},
+      acc_name = #{accName,jdbcType=INTEGER},
+      target_id = #{targetId,jdbcType=INTEGER},
+      result = #{result,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

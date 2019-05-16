@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.cms.dao.RcDistrictMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.cms.entity.RcDistrict">
+    <id column="id" jdbcType="SMALLINT" property="id" />
+    <result column="pid" jdbcType="SMALLINT" property="pid" />
+    <result column="district" jdbcType="VARCHAR" property="district" />
+    <result column="level" jdbcType="BIT" property="level" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, pid, district, level
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Short" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from rc_district
+    where id = #{id,jdbcType=SMALLINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short">
+    delete from rc_district
+    where id = #{id,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="com.suke.czx.modules.cms.entity.RcDistrict">
+    insert into rc_district (id, pid, district, 
+      level)
+    values (#{id,jdbcType=SMALLINT}, #{pid,jdbcType=SMALLINT}, #{district,jdbcType=VARCHAR}, 
+      #{level,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.cms.entity.RcDistrict">
+    insert into rc_district
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="pid != null">
+        pid,
+      </if>
+      <if test="district != null">
+        district,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=SMALLINT},
+      </if>
+      <if test="pid != null">
+        #{pid,jdbcType=SMALLINT},
+      </if>
+      <if test="district != null">
+        #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.cms.entity.RcDistrict">
+    update rc_district
+    <set>
+      <if test="pid != null">
+        pid = #{pid,jdbcType=SMALLINT},
+      </if>
+      <if test="district != null">
+        district = #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.cms.entity.RcDistrict">
+    update rc_district
+    set pid = #{pid,jdbcType=SMALLINT},
+      district = #{district,jdbcType=VARCHAR},
+      level = #{level,jdbcType=BIT}
+    where id = #{id,jdbcType=SMALLINT}
+  </update>
+</mapper>

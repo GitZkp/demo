@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.OrderExpressMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.OrderExpress">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="express_no" jdbcType="VARCHAR" property="expressNo" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="telphone" jdbcType="VARCHAR" property="telphone" />
+    <result column="telphone2" jdbcType="VARCHAR" property="telphone2" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="zip" jdbcType="INTEGER" property="zip" />
+    <result column="express_type" jdbcType="VARCHAR" property="expressType" />
+    <result column="express_fee" jdbcType="DECIMAL" property="expressFee" />
+    <result column="order_express_status" jdbcType="INTEGER" property="orderExpressStatus" />
+    <result column="express_settlement_status" jdbcType="INTEGER" property="expressSettlementStatus" />
+    <result column="express_result_last" jdbcType="VARCHAR" property="expressResultLast" />
+    <result column="express_result" jdbcType="VARCHAR" property="expressResult" />
+    <result column="express_create_time" jdbcType="INTEGER" property="expressCreateTime" />
+    <result column="express_update_time" jdbcType="INTEGER" property="expressUpdateTime" />
+    <result column="express_settlement_time" jdbcType="INTEGER" property="expressSettlementTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, order_id, express_no, realname, telphone, telphone2, address, zip, express_type, 
+    express_fee, order_express_status, express_settlement_status, express_result_last, 
+    express_result, express_create_time, express_update_time, express_settlement_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from order_express
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from order_express
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.OrderExpress">
+    insert into order_express (id, order_id, express_no, 
+      realname, telphone, telphone2, 
+      address, zip, express_type, 
+      express_fee, order_express_status, express_settlement_status, 
+      express_result_last, express_result, express_create_time, 
+      express_update_time, express_settlement_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{orderId,jdbcType=INTEGER}, #{expressNo,jdbcType=VARCHAR}, 
+      #{realname,jdbcType=VARCHAR}, #{telphone,jdbcType=VARCHAR}, #{telphone2,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{zip,jdbcType=INTEGER}, #{expressType,jdbcType=VARCHAR}, 
+      #{expressFee,jdbcType=DECIMAL}, #{orderExpressStatus,jdbcType=INTEGER}, #{expressSettlementStatus,jdbcType=INTEGER}, 
+      #{expressResultLast,jdbcType=VARCHAR}, #{expressResult,jdbcType=VARCHAR}, #{expressCreateTime,jdbcType=INTEGER}, 
+      #{expressUpdateTime,jdbcType=INTEGER}, #{expressSettlementTime,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.OrderExpress">
+    insert into order_express
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="expressNo != null">
+        express_no,
+      </if>
+      <if test="realname != null">
+        realname,
+      </if>
+      <if test="telphone != null">
+        telphone,
+      </if>
+      <if test="telphone2 != null">
+        telphone2,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="zip != null">
+        zip,
+      </if>
+      <if test="expressType != null">
+        express_type,
+      </if>
+      <if test="expressFee != null">
+        express_fee,
+      </if>
+      <if test="orderExpressStatus != null">
+        order_express_status,
+      </if>
+      <if test="expressSettlementStatus != null">
+        express_settlement_status,
+      </if>
+      <if test="expressResultLast != null">
+        express_result_last,
+      </if>
+      <if test="expressResult != null">
+        express_result,
+      </if>
+      <if test="expressCreateTime != null">
+        express_create_time,
+      </if>
+      <if test="expressUpdateTime != null">
+        express_update_time,
+      </if>
+      <if test="expressSettlementTime != null">
+        express_settlement_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="expressNo != null">
+        #{expressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null">
+        #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone2 != null">
+        #{telphone2,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null">
+        #{zip,jdbcType=INTEGER},
+      </if>
+      <if test="expressType != null">
+        #{expressType,jdbcType=VARCHAR},
+      </if>
+      <if test="expressFee != null">
+        #{expressFee,jdbcType=DECIMAL},
+      </if>
+      <if test="orderExpressStatus != null">
+        #{orderExpressStatus,jdbcType=INTEGER},
+      </if>
+      <if test="expressSettlementStatus != null">
+        #{expressSettlementStatus,jdbcType=INTEGER},
+      </if>
+      <if test="expressResultLast != null">
+        #{expressResultLast,jdbcType=VARCHAR},
+      </if>
+      <if test="expressResult != null">
+        #{expressResult,jdbcType=VARCHAR},
+      </if>
+      <if test="expressCreateTime != null">
+        #{expressCreateTime,jdbcType=INTEGER},
+      </if>
+      <if test="expressUpdateTime != null">
+        #{expressUpdateTime,jdbcType=INTEGER},
+      </if>
+      <if test="expressSettlementTime != null">
+        #{expressSettlementTime,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.OrderExpress">
+    update order_express
+    <set>
+      <if test="orderId != null">
+        order_id = #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="expressNo != null">
+        express_no = #{expressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null">
+        telphone = #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone2 != null">
+        telphone2 = #{telphone2,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null">
+        zip = #{zip,jdbcType=INTEGER},
+      </if>
+      <if test="expressType != null">
+        express_type = #{expressType,jdbcType=VARCHAR},
+      </if>
+      <if test="expressFee != null">
+        express_fee = #{expressFee,jdbcType=DECIMAL},
+      </if>
+      <if test="orderExpressStatus != null">
+        order_express_status = #{orderExpressStatus,jdbcType=INTEGER},
+      </if>
+      <if test="expressSettlementStatus != null">
+        express_settlement_status = #{expressSettlementStatus,jdbcType=INTEGER},
+      </if>
+      <if test="expressResultLast != null">
+        express_result_last = #{expressResultLast,jdbcType=VARCHAR},
+      </if>
+      <if test="expressResult != null">
+        express_result = #{expressResult,jdbcType=VARCHAR},
+      </if>
+      <if test="expressCreateTime != null">
+        express_create_time = #{expressCreateTime,jdbcType=INTEGER},
+      </if>
+      <if test="expressUpdateTime != null">
+        express_update_time = #{expressUpdateTime,jdbcType=INTEGER},
+      </if>
+      <if test="expressSettlementTime != null">
+        express_settlement_time = #{expressSettlementTime,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.OrderExpress">
+    update order_express
+    set order_id = #{orderId,jdbcType=INTEGER},
+      express_no = #{expressNo,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      telphone = #{telphone,jdbcType=VARCHAR},
+      telphone2 = #{telphone2,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      zip = #{zip,jdbcType=INTEGER},
+      express_type = #{expressType,jdbcType=VARCHAR},
+      express_fee = #{expressFee,jdbcType=DECIMAL},
+      order_express_status = #{orderExpressStatus,jdbcType=INTEGER},
+      express_settlement_status = #{expressSettlementStatus,jdbcType=INTEGER},
+      express_result_last = #{expressResultLast,jdbcType=VARCHAR},
+      express_result = #{expressResult,jdbcType=VARCHAR},
+      express_create_time = #{expressCreateTime,jdbcType=INTEGER},
+      express_update_time = #{expressUpdateTime,jdbcType=INTEGER},
+      express_settlement_time = #{expressSettlementTime,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suke.czx.modules.pay.dao.OrderDetailMapper">
+  <resultMap id="BaseResultMap" type="com.suke.czx.modules.pay.entity.OrderDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_price" jdbcType="DECIMAL" property="productPrice" />
+    <result column="product_sku" jdbcType="INTEGER" property="productSku" />
+    <result column="product_picture_url" jdbcType="VARCHAR" property="productPictureUrl" />
+    <result column="product_mode_desc" jdbcType="VARCHAR" property="productModeDesc" />
+    <result column="product_mode_params" jdbcType="INTEGER" property="productModeParams" />
+    <result column="discount_rate" jdbcType="TINYINT" property="discountRate" />
+    <result column="discount_amount" jdbcType="DECIMAL" property="discountAmount" />
+    <result column="number" jdbcType="INTEGER" property="number" />
+    <result column="subtotal" jdbcType="DECIMAL" property="subtotal" />
+    <result column="is_product_exists" jdbcType="CHAR" property="isProductExists" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.suke.czx.modules.pay.entity.OrderDetail">
+    <result column="remark" jdbcType="LONGVARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, order_id, product_id, product_name, product_price, product_sku, product_picture_url, 
+    product_mode_desc, product_mode_params, discount_rate, discount_amount, number, subtotal, 
+    is_product_exists, created_at, updated_at
+  </sql>
+  <sql id="Blob_Column_List">
+    remark
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from order_detail
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from order_detail
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.suke.czx.modules.pay.entity.OrderDetail">
+    insert into order_detail (id, order_id, product_id, 
+      product_name, product_price, product_sku, 
+      product_picture_url, product_mode_desc, product_mode_params, 
+      discount_rate, discount_amount, number, 
+      subtotal, is_product_exists, created_at, 
+      updated_at, remark)
+    values (#{id,jdbcType=INTEGER}, #{orderId,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, 
+      #{productName,jdbcType=VARCHAR}, #{productPrice,jdbcType=DECIMAL}, #{productSku,jdbcType=INTEGER}, 
+      #{productPictureUrl,jdbcType=VARCHAR}, #{productModeDesc,jdbcType=VARCHAR}, #{productModeParams,jdbcType=INTEGER}, 
+      #{discountRate,jdbcType=TINYINT}, #{discountAmount,jdbcType=DECIMAL}, #{number,jdbcType=INTEGER}, 
+      #{subtotal,jdbcType=DECIMAL}, #{isProductExists,jdbcType=CHAR}, #{createdAt,jdbcType=TIMESTAMP}, 
+      #{updatedAt,jdbcType=TIMESTAMP}, #{remark,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suke.czx.modules.pay.entity.OrderDetail">
+    insert into order_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="productName != null">
+        product_name,
+      </if>
+      <if test="productPrice != null">
+        product_price,
+      </if>
+      <if test="productSku != null">
+        product_sku,
+      </if>
+      <if test="productPictureUrl != null">
+        product_picture_url,
+      </if>
+      <if test="productModeDesc != null">
+        product_mode_desc,
+      </if>
+      <if test="productModeParams != null">
+        product_mode_params,
+      </if>
+      <if test="discountRate != null">
+        discount_rate,
+      </if>
+      <if test="discountAmount != null">
+        discount_amount,
+      </if>
+      <if test="number != null">
+        number,
+      </if>
+      <if test="subtotal != null">
+        subtotal,
+      </if>
+      <if test="isProductExists != null">
+        is_product_exists,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="updatedAt != null">
+        updated_at,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null">
+        #{productPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="productSku != null">
+        #{productSku,jdbcType=INTEGER},
+      </if>
+      <if test="productPictureUrl != null">
+        #{productPictureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="productModeDesc != null">
+        #{productModeDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="productModeParams != null">
+        #{productModeParams,jdbcType=INTEGER},
+      </if>
+      <if test="discountRate != null">
+        #{discountRate,jdbcType=TINYINT},
+      </if>
+      <if test="discountAmount != null">
+        #{discountAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=INTEGER},
+      </if>
+      <if test="subtotal != null">
+        #{subtotal,jdbcType=DECIMAL},
+      </if>
+      <if test="isProductExists != null">
+        #{isProductExists,jdbcType=CHAR},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suke.czx.modules.pay.entity.OrderDetail">
+    update order_detail
+    <set>
+      <if test="orderId != null">
+        order_id = #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null">
+        product_price = #{productPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="productSku != null">
+        product_sku = #{productSku,jdbcType=INTEGER},
+      </if>
+      <if test="productPictureUrl != null">
+        product_picture_url = #{productPictureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="productModeDesc != null">
+        product_mode_desc = #{productModeDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="productModeParams != null">
+        product_mode_params = #{productModeParams,jdbcType=INTEGER},
+      </if>
+      <if test="discountRate != null">
+        discount_rate = #{discountRate,jdbcType=TINYINT},
+      </if>
+      <if test="discountAmount != null">
+        discount_amount = #{discountAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="number != null">
+        number = #{number,jdbcType=INTEGER},
+      </if>
+      <if test="subtotal != null">
+        subtotal = #{subtotal,jdbcType=DECIMAL},
+      </if>
+      <if test="isProductExists != null">
+        is_product_exists = #{isProductExists,jdbcType=CHAR},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedAt != null">
+        updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.suke.czx.modules.pay.entity.OrderDetail">
+    update order_detail
+    set order_id = #{orderId,jdbcType=INTEGER},
+      product_id = #{productId,jdbcType=INTEGER},
+      product_name = #{productName,jdbcType=VARCHAR},
+      product_price = #{productPrice,jdbcType=DECIMAL},
+      product_sku = #{productSku,jdbcType=INTEGER},
+      product_picture_url = #{productPictureUrl,jdbcType=VARCHAR},
+      product_mode_desc = #{productModeDesc,jdbcType=VARCHAR},
+      product_mode_params = #{productModeParams,jdbcType=INTEGER},
+      discount_rate = #{discountRate,jdbcType=TINYINT},
+      discount_amount = #{discountAmount,jdbcType=DECIMAL},
+      number = #{number,jdbcType=INTEGER},
+      subtotal = #{subtotal,jdbcType=DECIMAL},
+      is_product_exists = #{isProductExists,jdbcType=CHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suke.czx.modules.pay.entity.OrderDetail">
+    update order_detail
+    set order_id = #{orderId,jdbcType=INTEGER},
+      product_id = #{productId,jdbcType=INTEGER},
+      product_name = #{productName,jdbcType=VARCHAR},
+      product_price = #{productPrice,jdbcType=DECIMAL},
+      product_sku = #{productSku,jdbcType=INTEGER},
+      product_picture_url = #{productPictureUrl,jdbcType=VARCHAR},
+      product_mode_desc = #{productModeDesc,jdbcType=VARCHAR},
+      product_mode_params = #{productModeParams,jdbcType=INTEGER},
+      discount_rate = #{discountRate,jdbcType=TINYINT},
+      discount_amount = #{discountAmount,jdbcType=DECIMAL},
+      number = #{number,jdbcType=INTEGER},
+      subtotal = #{subtotal,jdbcType=DECIMAL},
+      is_product_exists = #{isProductExists,jdbcType=CHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      updated_at = #{updatedAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

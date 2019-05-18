@@ -3,7 +3,9 @@ package com.suke.czx.modules.cms.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 /**
@@ -15,6 +17,8 @@ import lombok.Data;
  * @date 2018-05-24 15:56:39
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class CmsArticleEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 

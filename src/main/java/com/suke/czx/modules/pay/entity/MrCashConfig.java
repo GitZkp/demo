@@ -1,12 +1,18 @@
 package com.suke.czx.modules.pay.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 @Data
-public class MrCashConfig {
+@NoArgsConstructor
+@AllArgsConstructor
+public class MrCashConfig implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    '提现对象 0：用户 1：商家',
     private Byte targetType;

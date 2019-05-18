@@ -1,11 +1,17 @@
 package com.suke.czx.modules.cms.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class ScheduleJobLog {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ScheduleJobLog implements Serializable {
+    private static final long serialVersionUID = 1L;
 //    任务日志id
     private Long logId;
 //    任务id

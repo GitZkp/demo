@@ -1,7 +1,9 @@
 package com.suke.czx.modules.sys.entity;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,6 +16,8 @@ import java.util.List;
  * @date 2016年9月18日 上午9:26:39
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SysMenuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

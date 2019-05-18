@@ -1,12 +1,18 @@
 package com.suke.czx.modules.home.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 @Data
-public class HomeMenus {
+@NoArgsConstructor
+@AllArgsConstructor
+public class HomeMenus implements Serializable {
+    private static final long serialVersionUID = 1L;
     //主键
     private Integer id;
     //    父id

@@ -1,11 +1,17 @@
 package com.suke.czx.modules.pay.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
-public class OrderReturns {
+@NoArgsConstructor
+@AllArgsConstructor
+public class OrderReturns implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    退货编号 供客户查询
     private String returnsNo;

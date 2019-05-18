@@ -1,11 +1,18 @@
 package com.suke.czx.modules.pay.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.annotation.Nonnull;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
-public class OrderExpress {
+@NoArgsConstructor
+@AllArgsConstructor
+public class OrderExpress implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    订单编码
     private Integer orderId;

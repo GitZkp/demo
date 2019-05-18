@@ -2,7 +2,9 @@ package com.suke.czx.modules.sys.entity;
 
 import com.suke.czx.common.validator.group.AddGroup;
 import com.suke.czx.common.validator.group.UpdateGroup;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -18,6 +20,8 @@ import java.util.List;
  * @date 2016年9月18日 上午9:28:55
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SysUserEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

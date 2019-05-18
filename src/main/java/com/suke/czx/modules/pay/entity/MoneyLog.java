@@ -1,13 +1,19 @@
 package com.suke.czx.modules.pay.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 
 @Data
-public class MoneyLog {
+@NoArgsConstructor
+@AllArgsConstructor
+public class MoneyLog implements Serializable {
+    private static final long serialVersionUID = 1L;
     //主键
     private Integer id;
 //'用户类型 0：商品 1：商家

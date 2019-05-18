@@ -1,12 +1,18 @@
 package com.suke.czx.modules.goods.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 @Data
-public class ProductBrand {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProductBrand implements Serializable {
+    private static final long serialVersionUID = 1L;
 //    类目对应多个品牌，品牌应对应多个类目并非关联多个类目'
     private Integer id;
 //    商品类别编号

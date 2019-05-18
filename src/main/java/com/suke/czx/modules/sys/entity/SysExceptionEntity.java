@@ -5,7 +5,9 @@ import java.util.Date;
 
 import javax.validation.constraints.NotNull;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 异常
@@ -13,7 +15,8 @@ import lombok.Data;
  *
  */
 @Data
-
+@NoArgsConstructor
+@AllArgsConstructor
 public class SysExceptionEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;

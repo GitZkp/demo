@@ -1,13 +1,19 @@
 package com.suke.czx.modules.goods.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 
 @Data
-public class ProductCartItem {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProductCartItem implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    购物车编码
     private Integer cartId;

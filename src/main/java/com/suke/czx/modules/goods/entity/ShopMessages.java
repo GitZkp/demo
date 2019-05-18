@@ -1,11 +1,17 @@
 package com.suke.czx.modules.goods.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class ShopMessages {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ShopMessages implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    发送者id 系统消息 发送者为0',
     private Integer sendId;

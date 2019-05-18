@@ -3,7 +3,9 @@ package com.suke.czx.modules.goods.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 /**
@@ -15,6 +17,8 @@ import lombok.Data;
  * @date 2017-08-31 11:15:55
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class GoodsSpecificationEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 

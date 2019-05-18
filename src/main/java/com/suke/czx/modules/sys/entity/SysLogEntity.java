@@ -1,6 +1,8 @@
 package com.suke.czx.modules.sys.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,6 +16,8 @@ import java.util.Date;
  * @date 2017-03-08 10:40:56
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SysLogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

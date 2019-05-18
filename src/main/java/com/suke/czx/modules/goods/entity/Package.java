@@ -1,13 +1,19 @@
 package com.suke.czx.modules.goods.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 
 @Data
-public class Package {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Package implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    套餐名
     private String packageName;

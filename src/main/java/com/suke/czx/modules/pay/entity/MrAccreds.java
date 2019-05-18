@@ -1,12 +1,18 @@
 package com.suke.czx.modules.pay.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 @Data
-public class MrAccreds {
+@NoArgsConstructor
+@AllArgsConstructor
+public class MrAccreds implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    认证项目名
     private String accName;

@@ -3,7 +3,9 @@ package com.suke.czx.modules.sys.entity;
 
 import java.io.Serializable;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 用户与角色对应关系
@@ -13,6 +15,8 @@ import lombok.Data;
  * @date 2016年9月18日 上午9:28:39
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SysUserRoleEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

@@ -1,11 +1,17 @@
 package com.suke.czx.modules.goods.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class ShopApply {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ShopApply implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    目标类型 0：商品 1：店铺 2：课程 3:服务
     private Integer targetType;

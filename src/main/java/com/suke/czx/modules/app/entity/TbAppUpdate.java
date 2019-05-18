@@ -1,11 +1,17 @@
 package com.suke.czx.modules.app.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class TbAppUpdate {
+@NoArgsConstructor
+@AllArgsConstructor
+public class TbAppUpdate implements Serializable {
+    private static final long serialVersionUID = 1L;
 //    APPID
     private String appid;
 //    更新内容

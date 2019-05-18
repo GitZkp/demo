@@ -1,5 +1,6 @@
 package com.suke.czx.config;
 
+import com.suke.czx.common.interceptor.RequestManageInterceptor;
 import com.suke.czx.common.xss.XssFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

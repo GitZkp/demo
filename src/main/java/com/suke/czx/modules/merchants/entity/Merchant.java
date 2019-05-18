@@ -1,15 +1,21 @@
 package com.suke.czx.modules.merchants.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 
 @Data
 @ToString
-public class Merchant {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Merchant implements Serializable {
+    private static final long serialVersionUID = 1L;
     //主键
     private Integer id;
 //    店铺编号

@@ -1,12 +1,18 @@
 package com.suke.czx.modules.goods.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 
 @Data
-public class ProductSku {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProductSku implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer id;
 //    商品编码
     private Integer productId;

@@ -79,7 +79,7 @@ public class RequestManageInterceptor  implements HandlerInterceptor{
             }
         }
 
-		return false;
+		return true;
 	}
 
 	@Override

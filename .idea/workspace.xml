@@ -1,75 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cc974cb-a44c-4f85-8794-328fcca9335b" name="Default Changelist" comment="5.16">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" beforeDir="false" />
+    <list default="true" id="3cc974cb-a44c-4f85-8794-328fcca9335b" name="Default Changelist" comment="5.20  添加放行( ,&quot;captcha.jpg&quot;) 验证码图片   zkp">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alipay_sdk_alipay_sdk_java_3_4_27_ALL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_cms_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_3_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_dysmsapi_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_kotlin_2_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_kevinsawicki_http_request_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_wxpay_wxpay_sdk_0_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_javase_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_api_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_impl_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_spi_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__eu_bitwalker_UserAgentUtils_1_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_2_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_converter_7_1_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_model_7_1_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_engine_7_1_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_process_validation_7_1_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_model_shared_7_1_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_runtime_shared_7_1_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_email_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_26_incubating.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_reflect_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shoplive.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shoplive.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/app/entity/TbAppUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/app/entity/TbAppUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsArticleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsArticleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsChannelEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsChannelEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsClassLinkEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsClassLinkEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsLinkClassEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsLinkClassEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsLinkEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsLinkEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsSiteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/CmsSiteEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/Friendlinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/Friendlinks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/RcDistrict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/RcDistrict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/Recommends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/Recommends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/ScheduleJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/ScheduleJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/ScheduleJobLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/cms/entity/ScheduleJobLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsAttributeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsAttributeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsGalleryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsGalleryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsIssueEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsIssueEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsSpecificationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsSpecificationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/Package.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAlbum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAlbum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttributeValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttributeValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductBrand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductSku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductSku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopApply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopApply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopCatagory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopCatagory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/home/entity/HomeMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/home/entity/HomeMenus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/job/entity/ScheduleJobEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/job/entity/ScheduleJobEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/job/entity/ScheduleJobLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/job/entity/ScheduleJobLogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/TbUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/TbUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserAuthorized.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserAuthorized.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserLike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserQueryHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/merchants/entity/UserQueryHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/oss/entity/SysOssEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/oss/entity/SysOssEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MoneyLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MoneyLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrAccreds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrAccreds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrCashConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrCashConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrCashRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrCashRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderAppraise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderAppraise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderAppraiseReplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderAppraiseReplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderExpress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderExpress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderReturns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderReturns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderReturnsApply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/OrderReturnsApply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/TransactionRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/TransactionRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/TransactionRecordWithBLOBs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/TransactionRecordWithBLOBs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysConfigEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysConfigEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysExceptionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysExceptionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysLogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysLogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysMenuEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysMenuEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysOss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysOss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleDeptEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleDeptEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleMenuEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleMenuEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysUserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysUserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysUserRoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysUserRoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysUserTokenEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysUserTokenEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/user/entity/UserEntity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,20 +58,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleMenuEntity.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/common/utils/AliDayunSms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state relative-caret-position="790">
+              <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/test.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            <state relative-caret-position="528">
+              <caret line="469" selection-start-line="469" selection-end-line="469" />
+              <folding>
+                <element signature="n#properties#0;n#project#0;n#!!top" />
+                <element signature="n#dependencies#0;n#project#0;n#!!top" />
+                <element signature="n#build#0;n#project#0;n#!!top" />
+                <element signature="n#repositories#0;n#project#0;n#!!top" />
+                <element signature="n#pluginRepositories#0;n#project#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,6 +100,7 @@
       <find>qrtz</find>
       <find>default</find>
       <find>javascript</find>
+      <find>com.aliyuncs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,17 +119,10 @@
         <option name="title" value="Current Branch" />
       </GitPushTagMode>
     </option>
-    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/GoodsSpecificationEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/Package.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAlbum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttribute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttributeValue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductBrand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCartItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCategory.java" />
@@ -196,6 +168,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysUserTokenEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/user/entity/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/Swagger2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/common/interceptor/WebConfigurer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/common/interceptor/RequestManageInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/common/utils/WxUtil.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/suke/czx/common/utils/AliDayunSms.java" />
       </list>
     </option>
   </component>
@@ -323,8 +301,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-141" />
-    <option name="y" value="2" />
+    <option name="x" value="563" />
+    <option name="y" value="56" />
     <option name="width" value="1479" />
     <option name="height" value="952" />
   </component>
@@ -336,279 +314,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="shoplive" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="goods" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="goods" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="home" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="home" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="im" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="job" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="job" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="merchants" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="merchants" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="oss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="oss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="oss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pay" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pay" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sys" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="user" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.suke.czx" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="user" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="shoplive2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="shoplive" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mapper" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -658,7 +376,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.suke.czx.modules.sys.entity.test" />
       <module name="shoplive" />
@@ -704,6 +422,9 @@
       <workItem from="1557911705554" duration="4683000" />
       <workItem from="1557966120279" duration="19029000" />
       <workItem from="1558164755513" duration="3638000" />
+      <workItem from="1558332658071" duration="734000" />
+      <workItem from="1558333416992" duration="1479000" />
+      <workItem from="1558334961176" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="2019">
       <created>1557990001365</created>
@@ -712,17 +433,23 @@
       <option name="project" value="LOCAL" />
       <updated>1557990001365</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="5.20  添加放行( ,&quot;captcha.jpg&quot;) 验证码图片   zkp">
+      <created>1558333799240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558333799241</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36172000" />
+    <option name="totallyTimeSpent" value="39114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49943247" visible="true" weight="0.31021506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49943247" visible="true" weight="0.31989247" />
       <window_info id="Structure" order="1" sideWeight="0.50056756" side_tool="true" weight="0.30537635" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -738,7 +465,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946237" weight="0.32879817" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49946237" weight="0.3291714" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053763" side_tool="true" weight="0.3291714" />
@@ -760,89 +487,60 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="5-16" />
     <MESSAGE value="2019-05-16" />
     <MESSAGE value="2019" />
     <MESSAGE value="2019 5 . 16" />
     <MESSAGE value="5.16" />
-    <option name="LAST_COMMIT_MESSAGE" value="5.16" />
+    <MESSAGE value="5.20  添加放行( ,&quot;captcha.jpg&quot;) 验证码图片   zkp" />
+    <option name="LAST_COMMIT_MESSAGE" value="5.20  添加放行( ,&quot;captcha.jpg&quot;) 验证码图片   zkp" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAlbum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductAttributeValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductBrand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCartItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ProductSku.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopApply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopCatagory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/goods/entity/ShopMessages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -951,13 +649,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrAccreds.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrCashConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
           <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
@@ -1116,17 +807,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/Swagger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/entity/MrCashConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1826">
+          <caret line="83" column="29" selection-start-line="83" selection-start-column="18" selection-end-line="83" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/SysRoleMenuEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="396">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/sys/entity/test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/common/interceptor/WebConfigurer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        <state relative-caret-position="1430">
+          <caret line="65" column="102" selection-start-line="65" selection-start-column="102" selection-end-line="65" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/weixin/WeixinPay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/common/interceptor/RequestManageInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/common/utils/WxUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/common/web/JsonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/modules/pay/ali/AliPay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/suke/czx/common/utils/AliDayunSms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="469" selection-start-line="469" selection-end-line="469" />
+          <folding>
+            <element signature="n#properties#0;n#project#0;n#!!top" />
+            <element signature="n#dependencies#0;n#project#0;n#!!top" />
+            <element signature="n#build#0;n#project#0;n#!!top" />
+            <element signature="n#repositories#0;n#project#0;n#!!top" />
+            <element signature="n#pluginRepositories#0;n#project#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
